@@ -1,0 +1,49 @@
+INFO     log:test_04_role.py:48 *************** 开始执行用例 ***************
+INFO     log:test_04_role.py:10 前置步骤===>用户：apitest01注册+登录
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/account/register
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "username": "apitest01",
+    "password": "123456",
+    "hardware": "1"
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:account.py:30 注册用户 ==>> 返回结果 ==>> {"code":"USERNAME_EXIST","data":{}}
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/account/login
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "username": "apitest01",
+    "password": "123456",
+    "channel": 1
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:account.py:59 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"role_created":false,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzMsImp0aSI6IjRhM2IwNDNhLTVlMzktNDI0Ny1iMTcxLTkzMTQxMmZkZDA0OSIsImFpZCI6MTYsImV4Y2x1c2l2ZSI6dHJ1ZX0.bM2VCZHR8p7LfUSLuV9nr9RdtCGGpnuYIJX-TSGX5RI"}}
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/pet/create
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzMsImp0aSI6IjRhM2IwNDNhLTVlMzktNDI0Ny1iMTcxLTkzMTQxMmZkZDA0OSIsImFpZCI6MTYsImV4Y2x1c2l2ZSI6dHJ1ZX0.bM2VCZHR8p7LfUSLuV9nr9RdtCGGpnuYIJX-TSGX5RI"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "name": "abcdabcdabcdabcda",
+    "master_name": "主人"
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:role.py:52 创建角色 ==>> 返回结果 ==>> {"code":"INVALID_NICKNAME","data":{}}
+INFO     log:test_04_role.py:57 code ==>> 期望结果：INVALID_NICKNAME， 实际结果：INVALID_NICKNAME
+INFO     log:test_04_role.py:60 *************** 结束执行用例 ***************

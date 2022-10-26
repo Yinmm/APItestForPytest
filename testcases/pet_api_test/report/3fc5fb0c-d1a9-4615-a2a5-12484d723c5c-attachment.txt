@@ -1,0 +1,15 @@
+[2022-10-26 16:02:15,002][test_04_role.py 81][INFO]: *************** 开始执行用例 ***************
+[2022-10-26 16:02:15,002][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/account/update
+[2022-10-26 16:02:15,002][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:15,002][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:15,002][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:15,002][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:15,002][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> null
+[2022-10-26 16:02:15,002][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:15,003][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:15,132][role.py 96][INFO]: 刷新宠物信息 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"items":[{"class":1,"item_id":113,"number":70},{"class":1,"item_id":115,"number":2636},{"class":1,"item_id":116,"number":2636},{"class":1,"item_id":100,"number":50},{"class":1,"item_id":101,"number":49},{"class":1,"item_id":102,"number":50}],"shits":null}}
+[2022-10-26 16:02:15,133][test_04_role.py 85][INFO]: code ==>> 期望结果：SUCCESS， 实际结果：SUCCESS
+[2022-10-26 16:02:15,133][test_04_role.py 87][INFO]: *************** 结束执行用例 ***************

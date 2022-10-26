@@ -1,0 +1,76 @@
+INFO     log:test_05_work.py:46 *************** 开始执行用例 ***************
+INFO     log:test_05_work.py:11 前置步骤===>前置饥饿值-0,前置心情值-50,前置清洁值-50,前置健康值-50
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 100,
+    "class": 1
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 101,
+    "class": 1
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 113,
+    "class": 1
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
+    "number": 0,
+    "item_id": 102,
+    "class": 1
+}
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:rest_client.py:51 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/work/start
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> null
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:work.py:46 开始工作 ==>> 返回结果 ==>> {"code":"HUNGER_IS_0","data":{}}
+INFO     log:test_05_work.py:58 code ==>> 期望结果：HUNGER_IS_0， 实际结果：HUNGER_IS_0
+INFO     log:test_05_work.py:61 *************** 结束执行用例 ***************

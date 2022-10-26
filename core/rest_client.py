@@ -13,7 +13,7 @@ class RestClient():
         return self.request(url, "GET", **kwargs)
 
     def post(self, url, data=None, json=None, **kwargs):
-        return self.request(url, "POST", data, json, **kwargs)
+        return self.request(url, "POST", data, json, **kwargs, verify=False)
 
     def put(self, url, data=None, **kwargs):
         return self.request(url, "PUT", data, **kwargs)

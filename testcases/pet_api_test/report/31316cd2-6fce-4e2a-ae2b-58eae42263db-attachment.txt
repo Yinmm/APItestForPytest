@@ -1,0 +1,94 @@
+[2022-10-26 16:02:19,788][test_06_item.py 54][INFO]: *************** 开始执行用例 ***************
+[2022-10-26 16:02:19,789][test_06_item.py 11][INFO]: 前置步骤===>前置金币数量-500,前置饥饿值-50,前置健康值-50,前置清洁值-50,前置心情值-50,使用物品类别-2,使用物品ID-100,
+[2022-10-26 16:02:19,789][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+[2022-10-26 16:02:19,789][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:19,789][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:19,789][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:19,789][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:19,789][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "number": 500,
+    "item_id": 1,
+    "class": 1
+}
+[2022-10-26 16:02:19,789][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:19,789][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:19,938][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+[2022-10-26 16:02:19,938][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:19,938][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:19,939][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:19,939][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:19,939][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 100,
+    "class": 1
+}
+[2022-10-26 16:02:19,939][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:19,939][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:20,087][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+[2022-10-26 16:02:20,087][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:20,087][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:20,088][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:20,088][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:20,088][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 101,
+    "class": 1
+}
+[2022-10-26 16:02:20,088][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:20,088][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:20,230][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+[2022-10-26 16:02:20,230][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:20,231][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:20,231][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:20,231][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:20,231][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 113,
+    "class": 1
+}
+[2022-10-26 16:02:20,231][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:20,231][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:20,436][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity
+[2022-10-26 16:02:20,436][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:20,436][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:20,436][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:20,436][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:20,436][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "number": 50,
+    "item_id": 102,
+    "class": 1
+}
+[2022-10-26 16:02:20,436][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:20,436][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:20,589][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/item/use
+[2022-10-26 16:02:20,589][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-26 16:02:20,589][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjczNzYxMzIsImp0aSI6ImYyZDZjNjAzLTFhNmEtNDM5ZC1hYTYxLTMzZWZjM2M3NTA1OCIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.41c7UGJsAqiLMydWK75oaL6QtzDO2jPmOSdECg4YYNg"
+}
+[2022-10-26 16:02:20,590][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-26 16:02:20,590][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-26 16:02:20,590][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "class": 2,
+    "item_id": 100
+}
+[2022-10-26 16:02:20,590][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-26 16:02:20,590][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-26 16:02:20,751][item.py 82][INFO]: 使用物品 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"items":[{"class":1,"item_id":1,"number":450},{"class":1,"item_id":102,"number":60}]}}
+[2022-10-26 16:02:20,751][test_06_item.py 68][INFO]: code ==>> 期望结果：SUCCESS， 实际结果：SUCCESS
+[2022-10-26 16:02:20,751][test_06_item.py 71][INFO]: *************** 结束执行用例 ***************

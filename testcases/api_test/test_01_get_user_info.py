@@ -1,6 +1,6 @@
 import pytest
 import allure
-from operation.user import get_all_user_info, get_one_user_info
+from operation.account import register
 from testcases.conftest import api_data
 from common.logger import logger
 
@@ -62,4 +62,4 @@ class TestGetUserInfo():
 
 
 if __name__ == '__main__':
-    pytest.main(["-q", "-s", "test_01_get_user_info.py"])
+    pytest.main(["-q", "-s", "test_01_get_user_info.py", '--clean-alluredir', "--alluredir=../../report"])
