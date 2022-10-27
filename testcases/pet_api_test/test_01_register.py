@@ -58,9 +58,3 @@ if __name__ == '__main__':
     -i:用例执行失败时，打印出其局部变量
     """
     pytest.main(["-q", "-s", "test_01_register.py"])
-    # os.system(r"allure generate -c -o allure-report")
-    # pytest.main(["test_01_register.py", "--clean-alluredir"])
-
-    # allure generate ./json -o ./report --clean //生成测试报告
-    #
-    # allure open report --host 192.168.1.165 --port 8800 //打开报告 host = 本机ip
