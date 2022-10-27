@@ -152,3 +152,14 @@ class GM(RestClient):
 
 
 gm = GM(api_root_url)
+
+
+class Cloth(RestClient):
+    def __init__(self, api_root_url, **kwargs):
+        super(Cloth, self).__init__(api_root_url, **kwargs)
+
+    def cloth_save(self, **kwargs):
+        return self.post("/pet/clothes_save", **kwargs)
+
+
+cloth = Cloth(api_root_url)

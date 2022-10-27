@@ -1,0 +1,30 @@
+[2022-10-27 18:01:32,324][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/account/login
+[2022-10-27 18:01:32,324][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-27 18:01:32,324][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+[2022-10-27 18:01:32,324][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-27 18:01:32,324][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-27 18:01:32,324][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "username": "1test51",
+    "password": "123456",
+    "channel": 1
+}
+[2022-10-27 18:01:32,324][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-27 18:01:32,324][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-27 18:01:32,473][conftest.py 70][INFO]: 前置步骤===>用户：1test51登录
+[2022-10-27 18:01:32,475][test_10_cloth.py 22][INFO]: *************** 开始执行用例 ***************
+[2022-10-27 18:01:32,475][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/pet/clothes_save
+[2022-10-27 18:01:32,475][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-27 18:01:32,475][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc0Njk2OTIsImp0aSI6IjZmMWEwN2UxLTcwZjgtNDBlNS1hMTgxLTlhZmQ4Zjg0NjY0ZiIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.eV95PJsCF5Y_lYc7HhOTEuELy1jiGb8PQlNm_zPQUe8"
+}
+[2022-10-27 18:01:32,475][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-27 18:01:32,475][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-27 18:01:32,475][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {}
+[2022-10-27 18:01:32,475][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-27 18:01:32,475][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-27 18:01:32,609][cloth.py 25][INFO]: 保存穿戴信息 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{}}
+[2022-10-27 18:01:32,609][test_10_cloth.py 32][INFO]: code ==>> 期望结果：SUCCESS， 实际结果：SUCCESS
+[2022-10-27 18:01:32,610][test_10_cloth.py 35][INFO]: *************** 结束执行用例 ***************

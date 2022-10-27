@@ -6,6 +6,7 @@ class GM(object):
     """
     GM命令类
     """
+
     def __init__(self, token):
         self.token = token
 
@@ -95,3 +96,12 @@ class GM(object):
                     "class": i["class"]
                 }
                 self.moditem(data_json)
+
+    def gm_get_cloth(self, data_list):
+        for i in data_list:
+            data_json = {
+                "number": 1,
+                "item_id": i,
+                "class": 3
+            }
+            self.moditem(data_json)

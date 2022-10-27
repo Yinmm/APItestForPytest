@@ -28,6 +28,7 @@ test_create:
   - [ "apitest01", "123456", "1", 1, " " , "主人", "INVALID_NICKNAME", { } ]
   - [ "apitest01", "123456", "1", 1, "abcdabcdabcdabcda" , "主人", "INVALID_NICKNAME", { } ]
   - [ "apitest01", "123456", "1", 1, "宠物宠物宠物宠物宠" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "apitest01", "123456", "1", 1, "宠物宠物宠物宠物a" , "主人", "INVALID_NICKNAME", { } ]
   - [ "apitest01", "123456", "1", 1, "宠物" , "宠物", "PET_AND_OWNER_HAS_SAME_NAME", { } ]
 
 test_change_pet_name:
@@ -52,6 +53,10 @@ test_item_use:
 # gold,hunger,heath,clean,mood,Class, ID, except_code, except_msg
   - [ 500, 50, 50, 50, 50, 2 , 100, "SUCCESS", { } ]
   - [ 0, 50, 50, 50, 50, 2 , 100, "ITEM_NOT_ENOUGH", { } ]
+  - [ 500, 100, 50, 50, 50, 2 , 100, "HUNGER_IS_100", { } ]
+  - [ 500, 100, 100, 100, 100, 2 , 200, "CLEAN_IS_100", { } ]
+  - [ 500, 100, 100, 100, 100, 3 , 301, "HEALTH_IS_NOT_0", { } ]
+  - [ 500, 100, 100, 100, 100, 3 , 302, "HEALTH_IS_100", { } ]
   - [ 500, 50, 50, 50, 50, 2 , 9527, "ITEM_NOT_EXIST", { } ]
   - [ 500, 50, 0, 50, 50, 2 , 301, "SUCCESS", { } ]
   - [ 500, 50, 50, 50, 50, 2 , 301, "HEALTH_IS_NOT_0", { } ]
@@ -62,3 +67,29 @@ test_item_buy:
 # 前置金币数量,是否先清除服装：是—1，否-0, 是否先清除家具：是—1，否-0,购买物品类别,购买物品ID，购买数量,期望结果,期望返回信息
 # gold, cloth, furniture, Class, ID, number, except_code, except_msg
 - [ 10, 0, 0, 4, 1304 , 1, "ITEM_NOT_ENOUGH", { } ]
+- [ 500, 0, 0, 4, 1304 , 1, "SUCCESS", { } ]
+- [ 1000, 0, 0, 4, 1304 , 2, "SUCCESS", { } ]
+- [ 10000, 0, 1, 4, 1101 , 1, "SUCCESS", { } ]
+- [ 10000, 0, 0, 4, 1101 , 1, "ITEM_REPEAT_BUY", { } ]
+- [ 10000, 0, 1, 4, 1101 , 2, "ITEM_BUY_ONLY_ONE", { } ]
+- [ 10000, 0, 1, 4, 1201 , 1, "SUCCESS", { } ]
+- [ 10000, 0, 0, 4, 1201 , 1, "ITEM_REPEAT_BUY", { } ]
+- [ 10000, 0, 1, 4, 1201 , 2, "ITEM_BUY_ONLY_ONE", { } ]
+- [ 10000, 0, 0, 3, 1011 , 1, "SUCCESS", { } ]
+- [ 10000, 0, 0, 3, 1011 , 1, "ITEM_REPEAT_BUY", { } ]
+- [ 10000, 1, 0, 3, 1011 , 2, "ITEM_BUY_ONLY_ONE", { } ]
+- [ 10000, 0, 0, 3, 999 , 1, "ITEM_NOT_EXIST", { } ]
+- [ 10000, 0, 0, 4, 999 , 1, "ITEM_NOT_EXIST", { } ]
+- [ 10000, 0, 0, 1, 999 , 1, "INVALID_PARAM", { } ]
+
+
+test_cloth_save:
+# 是否先清除服装：是—1，否-0, 前置服装id：None—无前置,[], 保存服装内容：{{"20": 套装,"21": 头饰,"22": 眼镜,"23": 手持}},期望结果,期望返回信息
+# is_clean_cloth, cloth_list, cloth_save_list, except_code, except_msg
+- [ 0, [], {}, "SUCCESS", { } ]
+- [ 1, [], {"20": 1011}, "ITEM_NOT_ENOUGH", { } ]
+- [ 1, [], {"20": 9011}, "ITEM_NOT_EXIST", { } ]
+- [ 1, [1011], {"20": 1011}, "SUCCESS", { } ]
+- [ 1, [2011], {"21": 2011}, "SUCCESS", { } ]
+- [ 1, [2011,3011,4011], {"21": 2011, "22": 3011, "23": 4011}, "SUCCESS", { } ]
+- [ 1, [1011,2011,3011,4011], {"20":1011,"21": 2011,"22": 3011,"23": 4011}, "INVALID_PARAM", { } ]
