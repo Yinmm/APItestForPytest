@@ -124,8 +124,3 @@ class GM(object):
             }
             self.data_json_list.append(data_json)
 
-    def __del__(self):
-        """
-        类对象销毁前运行
-        """
-        self.moditem_list()

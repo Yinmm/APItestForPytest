@@ -52,6 +52,7 @@ class TestWork(object):
         gm.gm_clean(clean)
         gm.gm_heath(health)
         gm.gm_hunger(hunger)
+        gm.moditem_list()
         result = work_start(token)
         assert result.response.status_code == 200
         # assert result.success == except_code, result.error

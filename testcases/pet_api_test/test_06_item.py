@@ -61,6 +61,7 @@ class TestItem(object):
         gm.gm_clean(clean)
         gm.gm_heath(heath)
         gm.gm_hunger(hunger)
+        gm.moditem_list()
         result = item_use(token, Class, ID)
         # print(result.__dict__)
         assert result.response.status_code == 200
@@ -88,6 +89,7 @@ class TestItem(object):
             gm.gm_clean_cloth()
         if furniture == 1:
             gm.gm_clean_furniture()
+        gm.moditem_list()
         result = item_buy(token, Class, ID, number)
         assert result.response.status_code == 200
         logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code, result.response.json().get("code")))

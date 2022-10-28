@@ -26,6 +26,7 @@ class TestCloth(object):
         if is_clean_cloth == 1:
             gm.gm_clean_cloth()
         gm.gm_get_cloth(cloth_list)
+        gm.moditem_list()
         result = cloth_save(token, cloth_save_list)
         assert result.response.status_code == 200
         # assert result.success == except_code, result.error
