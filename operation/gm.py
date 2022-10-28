@@ -6,10 +6,10 @@ class GM(object):
     """
     GM命令类
     """
-    data_json_list = []
 
     def __init__(self, token):
         self.token = token
+        self.data_json_list = []
 
     def get_item_list(self):
         header = {
@@ -47,6 +47,7 @@ class GM(object):
             "Content-Type": "application/json",
             "token": self.token
         }
+        print(self.data_json_list)
         res = gm.gm_list(json=self.data_json_list, headers=header)
         result.success = False
         if res.json()["code"] == "SUCCESS":

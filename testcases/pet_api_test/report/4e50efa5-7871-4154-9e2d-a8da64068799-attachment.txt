@@ -1,0 +1,71 @@
+[2022-10-28 10:08:52,315][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/account/login
+[2022-10-28 10:08:52,315][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-28 10:08:52,315][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+[2022-10-28 10:08:52,315][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-28 10:08:52,315][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-28 10:08:52,315][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "username": "1test51",
+    "password": "123456",
+    "channel": 1
+}
+[2022-10-28 10:08:52,315][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-28 10:08:52,315][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-28 10:08:52,475][conftest.py 70][INFO]: 前置步骤===>用户：1test51登录
+[2022-10-28 10:08:52,477][test_06_item.py 54][INFO]: *************** 开始执行用例 ***************
+[2022-10-28 10:08:52,478][test_06_item.py 11][INFO]: 前置步骤===>前置金币数量-500,前置饥饿值-50,前置健康值-50,前置清洁值-50,前置心情值-50,使用物品类别-2,使用物品ID-100,
+[2022-10-28 10:08:52,478][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity_batch
+[2022-10-28 10:08:52,478][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-28 10:08:52,478][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc1Mjc3MzIsImp0aSI6IjI4N2YzN2ZlLTZhOTItNGViZS1hZTE3LTM0ZDQ5MmU2MDk2YyIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.WGK7sruJeCgR7A6lm_bR44Dl9X_yGK9GBnMa4F6PTjU"
+}
+[2022-10-28 10:08:52,478][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-28 10:08:52,478][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-28 10:08:52,478][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> [
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 102,
+        "class": 1
+    }
+]
+[2022-10-28 10:08:52,478][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-28 10:08:52,478][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-28 10:08:52,616][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/item/use
+[2022-10-28 10:08:52,617][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-28 10:08:52,617][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc1Mjc3MzIsImp0aSI6IjI4N2YzN2ZlLTZhOTItNGViZS1hZTE3LTM0ZDQ5MmU2MDk2YyIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.WGK7sruJeCgR7A6lm_bR44Dl9X_yGK9GBnMa4F6PTjU"
+}
+[2022-10-28 10:08:52,618][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-28 10:08:52,619][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-28 10:08:52,619][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "class": 2,
+    "item_id": 100
+}
+[2022-10-28 10:08:52,619][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-28 10:08:52,620][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-28 10:08:52,777][item.py 82][INFO]: 使用物品 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"items":[{"class":1,"item_id":1,"number":450},{"class":1,"item_id":102,"number":60}]}}
+[2022-10-28 10:08:52,777][test_06_item.py 69][INFO]: code ==>> 期望结果：SUCCESS， 实际结果：SUCCESS
+[2022-10-28 10:08:52,777][test_06_item.py 72][INFO]: *************** 结束执行用例 ***************
