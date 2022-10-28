@@ -1,0 +1,206 @@
+[2022-10-28 09:50:21,748][test_06_item.py 54][INFO]: *************** 开始执行用例 ***************
+[2022-10-28 09:50:21,748][test_06_item.py 11][INFO]: 前置步骤===>前置金币数量-500,前置饥饿值-50,前置健康值-50,前置清洁值-50,前置心情值-50,使用物品类别-2,使用物品ID-9527,
+[2022-10-28 09:50:21,749][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/item/use
+[2022-10-28 09:50:21,749][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-28 09:50:21,749][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc1MjY1ODgsImp0aSI6ImM0ZDk1NGFkLThjNmMtNGYzYi1hMDMxLTU0NDYwNDRlYzE1MSIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.XkDLE60j1HMR1K6so5R7kRsQ9GfDI71p328CwsSL_pY"
+}
+[2022-10-28 09:50:21,749][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-28 09:50:21,749][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-28 09:50:21,749][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "class": 2,
+    "item_id": 9527
+}
+[2022-10-28 09:50:21,749][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-28 09:50:21,749][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2022-10-28 09:50:21,918][item.py 82][INFO]: 使用物品 ==>> 返回结果 ==>> {"code":"ITEM_NOT_EXIST","data":{}}
+[2022-10-28 09:50:21,919][test_06_item.py 68][INFO]: code ==>> 期望结果：ITEM_NOT_EXIST， 实际结果：ITEM_NOT_EXIST
+[2022-10-28 09:50:21,920][test_06_item.py 71][INFO]: *************** 结束执行用例 ***************
+[2022-10-28 09:50:21,920][rest_client.py 51][INFO]: 接口请求地址 ==>> https://pets-backend-v2.topwidgets.cn/gm/change_item_quantity_batch
+[2022-10-28 09:50:21,921][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2022-10-28 09:50:21,921][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Njc1MjY1ODgsImp0aSI6ImM0ZDk1NGFkLThjNmMtNGYzYi1hMDMxLTU0NDYwNDRlYzE1MSIsImFpZCI6MSwiZXhjbHVzaXZlIjp0cnVlfQ.XkDLE60j1HMR1K6so5R7kRsQ9GfDI71p328CwsSL_pY"
+}
+[2022-10-28 09:50:21,922][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2022-10-28 09:50:21,922][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2022-10-28 09:50:21,926][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> [
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 0,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 500,
+        "item_id": 1,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 101,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 113,
+        "class": 1
+    },
+    {
+        "number": 50,
+        "item_id": 102,
+        "class": 1
+    }
+]
+[2022-10-28 09:50:21,926][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2022-10-28 09:50:21,926][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null

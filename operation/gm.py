@@ -6,6 +6,7 @@ class GM(object):
     """
     GM命令类
     """
+    data_json_list = []
 
     def __init__(self, token):
         self.token = token
@@ -35,13 +36,30 @@ class GM(object):
             result.success = True
         return result
 
+    def moditem_list(self):
+        """
+        主修改方法
+        传入json数据列表
+        :return: 自定义的关键字返回结果 result
+        """
+        result = ResultBase()
+        header = {
+            "Content-Type": "application/json",
+            "token": self.token
+        }
+        res = gm.gm_list(json=self.data_json_list, headers=header)
+        result.success = False
+        if res.json()["code"] == "SUCCESS":
+            result.success = True
+        return result
+
     def gm_gold(self, number):
         data_json = {
             "number": number,
             "item_id": 1,
             "class": 1
         }
-        self.moditem(data_json)
+        self.data_json_list.append(data_json)
 
     def gm_mood(self, number):
         data_json = {
@@ -49,7 +67,7 @@ class GM(object):
             "item_id": 100,
             "class": 1
         }
-        self.moditem(data_json)
+        self.data_json_list.append(data_json)
 
     def gm_hunger(self, number):
         data_json = {
@@ -57,7 +75,7 @@ class GM(object):
             "item_id": 102,
             "class": 1
         }
-        self.moditem(data_json)
+        self.data_json_list.append(data_json)
 
     def gm_clean(self, number):
         data_json = {
@@ -65,7 +83,7 @@ class GM(object):
             "item_id": 101,
             "class": 1
         }
-        self.moditem(data_json)
+        self.data_json_list.append(data_json)
 
     def gm_heath(self, number):
         data_json = {
@@ -73,7 +91,7 @@ class GM(object):
             "item_id": 113,
             "class": 1
         }
-        self.moditem(data_json)
+        self.data_json_list.append(data_json)
 
     def gm_clean_cloth(self):
         item_list = self.get_item_list()
@@ -84,7 +102,7 @@ class GM(object):
                     "item_id": i["item_id"],
                     "class": i["class"]
                 }
-                self.moditem(data_json)
+                self.data_json_list.append(data_json)
 
     def gm_clean_furniture(self):
         item_list = self.get_item_list()
@@ -95,7 +113,7 @@ class GM(object):
                     "item_id": i["item_id"],
                     "class": i["class"]
                 }
-                self.moditem(data_json)
+                self.data_json_list.append(data_json)
 
     def gm_get_cloth(self, data_list):
         for i in data_list:
@@ -104,4 +122,10 @@ class GM(object):
                 "item_id": i,
                 "class": 3
             }
-            self.moditem(data_json)
+            self.data_json_list.append(data_json)
+
+    def __del__(self):
+        """
+        类对象销毁前运行
+        """
+        self.moditem_list()
