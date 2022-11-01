@@ -67,8 +67,8 @@ test_item_buy:
 # 前置金币数量,是否先清除服装：是—1，否-0, 是否先清除家具：是—1，否-0,购买物品类别,购买物品ID，购买数量,期望结果,期望返回信息
 # gold, cloth, furniture, Class, ID, number, except_code, except_msg
 - [ 10, 0, 0, 4, 1304 , 1, "ITEM_NOT_ENOUGH", { } ]
-- [ 500, 0, 0, 4, 1304 , 1, "SUCCESS", { } ]
-- [ 1000, 0, 0, 4, 1304 , 2, "SUCCESS", { } ]
+- [ 900, 0, 0, 4, 1304 , 1, "SUCCESS", { } ]
+- [ 1800, 0, 0, 4, 1304 , 2, "SUCCESS", { } ]
 - [ 50000, 0, 1, 4, 1101 , 1, "SUCCESS", { } ]
 - [ 50000, 0, 0, 4, 1101 , 1, "ITEM_REPEAT_BUY", { } ]
 - [ 50000, 0, 1, 4, 1101 , 2, "ITEM_BUY_ONLY_ONE", { } ]
