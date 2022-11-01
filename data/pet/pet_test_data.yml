@@ -84,7 +84,7 @@ test_item_buy:
 
 
 test_cloth_save:
-# 是否先清除服装：是—1，否-0, 前置服装id：None—无前置,[], 保存服装内容：{{"20": 套装,"21": 头饰,"22": 眼镜,"23": 手持}},期望结果,期望返回信息
+# 是否先清除服装：是—1，否-0, 前置服装id：无前置[], 保存服装内容：{{"20": 套装,"21": 头饰,"22": 眼镜,"23": 手持}},期望结果,期望返回信息
 # is_clean_cloth, cloth_list, cloth_save_list, except_code, except_msg
 - [ 0, [], {}, "SUCCESS", { } ]
 - [ 1, [], {"20": 1011}, "ITEM_NOT_ENOUGH", { } ]

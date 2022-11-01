@@ -52,4 +52,3 @@ if __name__ == '__main__':
 
     # allure generate ./json -o ./report --clean //生成测试报告
     #
-    # allure open report --host 192.168.1.165 --port 8800 //打开报告 host = 本机ip
