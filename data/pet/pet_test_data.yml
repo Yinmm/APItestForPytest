@@ -2,7 +2,7 @@ test_register_user:
   # 用户名,密码,设备,期望结果,期望返回信息
   # username, password, hardware, except_code, except_msg
   - ["test", "123456", "1", "SUCCESS", {}]
-  - ["test001", "123456", "1", "USERNAME_EXIST", {}]
+  - ["1test51", "123456", "1", "USERNAME_EXIST", {}]
 
 
 test_login_user:

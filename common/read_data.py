@@ -12,6 +12,7 @@ class MyConfigParser(ConfigParser):
     def optionxform(self, optionstr):
         return optionstr
 
+
 class ReadFileData():
 
     def __init__(self):
