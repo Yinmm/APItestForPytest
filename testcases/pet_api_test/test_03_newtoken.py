@@ -1,7 +1,7 @@
 import pytest
 import allure
 from operation.account import get_new_token
-from testcases.conftest import pet_data_register
+from testcases.conftest import pet_data
 from common.logger import logger
 import os
 
@@ -18,7 +18,7 @@ class TestNewToken(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("username, password, channel, except_code, except_msg",
-                             pet_data_register["test_get_new_token"])
+                             pet_data["test_get_new_token"])
     def test_pet_new_token(self, pet_login_hasrole_fixture, username,password, channel, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture

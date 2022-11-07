@@ -5,6 +5,7 @@ init_admin_user:
 test_account_hasrole:
   username: "1test51"
   password: "123456"
+  account_id: "6360bf8ef36c0134564db35c"
 
 test_account_norole:
   username: "1test99"

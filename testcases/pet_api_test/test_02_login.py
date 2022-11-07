@@ -1,7 +1,7 @@
 import pytest
 import allure
 from operation.account import login
-from testcases.conftest import pet_data_register
+from testcases.conftest import pet_data
 from common.logger import logger
 import os
 
@@ -30,7 +30,7 @@ class TestLogin(object):
     @pytest.mark.smoke
     @pytest.mark.regression
     @pytest.mark.parametrize("username, password, channel, except_code, except_msg",
-                             pet_data_register["test_login_user"])
+                             pet_data["test_login_user"])
     def test_pet_login(self, username, password, channel, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         result = login(username, password, channel)

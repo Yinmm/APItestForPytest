@@ -2,7 +2,7 @@ import pytest
 import allure
 from operation.work import *
 from operation.gm import GM
-from testcases.conftest import pet_data_register
+from testcases.conftest import pet_data
 from common.logger import logger
 
 
@@ -41,7 +41,7 @@ class TestWork(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("hunger, mood, clean, health, except_code, except_msg",
-                             pet_data_register["test_start_work"])
+                             pet_data["test_start_work"])
     def test_start_work(self, pet_login_hasrole_fixture,hunger, mood, clean, health, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         step_work(hunger, mood, clean, health)

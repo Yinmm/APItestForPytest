@@ -7,7 +7,6 @@ from common.mysql_operate import db
 from common.read_data import data
 from common.logger import logger
 
-
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 
@@ -22,9 +21,9 @@ def get_data(yaml_file_name):
 
 
 base_data = get_data("base_data.yml")
-pet_data_register = get_data("pet/pet_test_data.yml")
+pet_data = get_data("pet/pet_test_data.yml")
 
-
+account_id = base_data["test_account_hasrole"]["account_id"]
 
 @allure.step("前置步骤 ==>> 清理数据")
 def step_first():
@@ -119,3 +118,4 @@ def delete_register_user():
     step_last()
     logger.info("注册用户操作：删除注册的用户")
     logger.info("执行后置SQL：{}".format(del_sql))
+

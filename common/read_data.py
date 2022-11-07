@@ -2,6 +2,7 @@ import yaml
 import json
 from configparser import ConfigParser
 from common.logger import logger
+import openpyxl as op
 
 
 class MyConfigParser(ConfigParser):
@@ -39,5 +40,22 @@ class ReadFileData():
         data = dict(config._sections)
         # print("读到数据 ==>>  {} ".format(data))
         return data
+
+    def load_lua_xlsx(self, file_path):
+        logger.info("加载 {} 文件......".format(file_path))
+        wb = op.load_workbook(file_path)
+        active_sheet = wb.active
+        dict = {}
+        row_num = active_sheet.max_row
+        for row in range(1, row_num + 1):
+            key = active_sheet.cell(row, 1).value
+            value = active_sheet.cell(row, 5).value
+            if isinstance(value, str):
+                if "{" not in value:
+                    value = value.split(',')
+            dict[key] = value
+        wb.close()
+        return dict
+
 
 data = ReadFileData()

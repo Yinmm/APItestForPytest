@@ -2,7 +2,7 @@ import pytest
 import allure
 from operation.item import *
 from operation.gm import GM
-from testcases.conftest import pet_data_register
+from testcases.conftest import pet_data
 from common.logger import logger
 
 
@@ -48,7 +48,7 @@ class TestItem(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("gold,hunger,heath,clean,mood,Class, ID, except_code, except_msg",
-                             pet_data_register["test_item_use"])
+                             pet_data["test_item_use"])
     def test_item_use(self, pet_login_hasrole_fixture, gold, hunger, heath, clean, mood, Class, ID, except_code,
                       except_msg):
         logger.info("*************** 开始执行用例 ***************")
@@ -76,7 +76,7 @@ class TestItem(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("gold, cloth, furniture, Class, ID, number, except_code, except_msg",
-                             pet_data_register["test_item_buy"])
+                             pet_data["test_item_buy"])
     def test_item_buy(self, pet_login_hasrole_fixture, gold, cloth, furniture, Class, ID, number, except_code,
                       except_msg):
         logger.info("*************** 开始执行用例 ***************")

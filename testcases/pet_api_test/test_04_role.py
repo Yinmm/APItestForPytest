@@ -2,7 +2,7 @@ import pytest
 import allure
 from operation.role import *
 from operation.account import *
-from testcases.conftest import pet_data_register
+from testcases.conftest import pet_data
 from common.logger import logger
 
 @allure.step("前置步骤 ===> 用户注册+登录")
@@ -23,7 +23,7 @@ class TestRole(object):
     @pytest.mark.smoke
     @pytest.mark.skip()
     @pytest.mark.parametrize("username, password, channel, except_code, except_msg",
-                             pet_data_register["test_init_type"])
+                             pet_data["test_init_type"])
     def test_init_type(self, pet_login_hasrole_fixture, username, password, channel, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
@@ -43,7 +43,7 @@ class TestRole(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("username, password, hardware, channel, name, master_name, except_code, except_msg",
-                             pet_data_register["test_create"])
+                             pet_data["test_create"])
     def test_create(self, username, password, hardware, channel, name, master_name, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         step_pet_register(username)
@@ -91,7 +91,7 @@ class TestRole(object):
     @pytest.mark.single
     @pytest.mark.smoke
     @pytest.mark.parametrize("name, master_name, except_code, except_msg",
-                             pet_data_register["test_change_pet_name"])
+                             pet_data["test_change_pet_name"])
     def test_change_pet_name(self, pet_login_hasrole_fixture, name, master_name, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
