@@ -94,6 +94,14 @@ class GM(object):
         }
         self.data_json_list.append(data_json)
 
+    def gm_weight(self, number):
+        data_json = {
+            "number": number,
+            "item_id": 115,
+            "class": 1
+        }
+        self.data_json_list.append(data_json)
+
     def gm_clean_cloth(self):
         item_list = self.get_item_list()
         for i in item_list:

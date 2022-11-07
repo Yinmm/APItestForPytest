@@ -32,7 +32,7 @@ class TestRegister(object):
                              pet_data["test_register_user"])
     def test_pet_register(self, username, password, hardware, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
-        if username != "test001":
+        if username != "1test51":
             username = username+str(time.time())
         result = register(username, password, hardware)
         # print(result.__dict__)

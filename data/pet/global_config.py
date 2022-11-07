@@ -32,10 +32,10 @@ class PetGlobalConfig():
         """
         CleanConfig = self.pet_global_config["CleanConfig"]
         dict = {
-            "min": CleanConfig[0],
-            "max": CleanConfig[1],
-            "time": CleanConfig[2],
-            "reduce": CleanConfig[3]
+            "min": int(CleanConfig[0]),
+            "max": int(CleanConfig[1]),
+            "time": int(CleanConfig[2]),
+            "reduce": int(CleanConfig[3])
         }
         return dict
 
@@ -45,10 +45,10 @@ class PetGlobalConfig():
         """
         MoodConfig = self.pet_global_config["MoodConfig"]
         dict = {
-            "min": MoodConfig[0],
-            "max": MoodConfig[1],
-            "time": MoodConfig[2],
-            "reduce": MoodConfig[3]
+            "min": int(MoodConfig[0]),
+            "max": int(MoodConfig[1]),
+            "time": int(MoodConfig[2]),
+            "reduce": int(MoodConfig[3])
         }
         return dict
 
@@ -59,12 +59,12 @@ class PetGlobalConfig():
         """
         HealthConfig = self.pet_global_config["HealthConfig"]
         dict = {
-            "min": HealthConfig[0],
-            "max": HealthConfig[1],
-            "time": HealthConfig[2],
-            "reduce_0": HealthConfig[3],
-            "reduce_1": HealthConfig[4],
-            "reduce_2": HealthConfig[5]
+            "min": int(HealthConfig[0]),
+            "max": int(HealthConfig[1]),
+            "time": int(HealthConfig[2]),
+            "reduce_0": int(HealthConfig[3]),
+            "reduce_1": int(HealthConfig[4]),
+            "reduce_2": int(HealthConfig[5])
         }
         return dict
 
@@ -74,8 +74,8 @@ class PetGlobalConfig():
         """
         WeightUp = self.pet_global_config["WeightUp"]
         dict = {
-            "time": WeightUp[0],
-            "value": WeightUp[1]
+            "time": int(WeightUp[0]),
+            "value": int(WeightUp[1])
         }
         return dict
 
@@ -99,8 +99,8 @@ class PetGlobalConfig():
         """
         WeightDown = self.pet_global_config["WeightDown"]
         dict = {
-            "time": WeightDown[0],
-            "value": WeightDown[1]
+            "time": int(WeightDown[0]),
+            "value": int(WeightDown[1])
         }
         return dict
 
@@ -110,8 +110,8 @@ class PetGlobalConfig():
         """
         WeightDownLimit = self.pet_global_config["WeightDownLimit"]
         dict = {
-            "max_reduce": WeightDownLimit[0],
-            "min_value": WeightDownLimit[1]
+            "max_reduce": int(WeightDownLimit[0]),
+            "min_value": int(WeightDownLimit[1])
         }
         return dict
 
