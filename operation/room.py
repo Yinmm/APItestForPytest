@@ -14,6 +14,8 @@ def room_get(token):
         "token": token
     }
     res = room.room_get(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -39,6 +41,8 @@ def room_save(token, list=[]):
         "data": list
     }
     res = room.room_save(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

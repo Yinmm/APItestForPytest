@@ -10,6 +10,8 @@ def get_all_user_info():
     """
     result = ResultBase()
     res = user.list_all_users()
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True
@@ -28,6 +30,8 @@ def get_one_user_info(username):
     """
     result = ResultBase()
     res = user.list_one_user(username)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True
@@ -61,6 +65,8 @@ def register_user(username, password, telephone, sex="", address=""):
         "Content-Type": "application/json"
     }
     res = user.register(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True
@@ -88,6 +94,8 @@ def login_user(username, password):
         "Content-Type": "application/x-www-form-urlencoded"
     }
     res = user.login(data=payload, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True
@@ -125,6 +133,8 @@ def update_user(id, admin_user, new_password, new_telephone, token, new_sex="", 
         "address": new_address
     }
     res = user.update(id, json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True
@@ -153,6 +163,8 @@ def delete_user(username, admin_user, token):
         "Content-Type": "application/json"
     }
     res = user.delete(username, json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == 0:
         result.success = True

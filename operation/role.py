@@ -14,6 +14,8 @@ def get_init_type(token):
         "token": token
     }
     res = role.init_type(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -42,6 +44,8 @@ def create(token, name, master_name):
         "token": token
     }
     res = role.create(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -64,6 +68,8 @@ def info(token):
          "token": token
     }
     res = role.info(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -86,6 +92,8 @@ def update(token):
          "token": token
     }
     res = role.update(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -113,6 +121,8 @@ def change_pet_name(token, name):
         "token": token
     }
     res = role.change_pet_nickname(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -140,6 +150,8 @@ def change_master_name(token, master_name):
         "token": token
     }
     res = role.change_owner_nickname(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

@@ -22,6 +22,8 @@ def item_buy(token, Class, itme_id, number):
         "number": number
     }
     res = item.buy(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -44,6 +46,8 @@ def item_list(token):
         "token": token
     }
     res = item.item_list(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -72,6 +76,8 @@ def item_use(token, Class, itme_id):
         "item_id": itme_id
     }
     res = item.item_use(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

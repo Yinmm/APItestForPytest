@@ -15,6 +15,8 @@ def cloth_save(token, data):
     }
     data_json = data
     res = cloth.cloth_save(json=data_json, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

@@ -20,6 +20,8 @@ def register(username, password, hardware):
         "Content-Type": "application/json"
     }
     res = account.register(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

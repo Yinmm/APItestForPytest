@@ -14,6 +14,8 @@ def work_info(token):
         "token": token
     }
     res = work.work_info(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -36,6 +38,8 @@ def work_start(token):
         "token": token
     }
     res = work.work_start(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -58,6 +62,8 @@ def work_reward(token):
         "token": token
     }
     res = work.work_reward(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True

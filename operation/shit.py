@@ -14,6 +14,8 @@ def shit_info(token):
         "token": token
     }
     res = shit.shit_info(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
@@ -38,6 +40,8 @@ def shit_clean(token, list):
     }
     json_data =list
     res = shit.shit_clean(json=json_data, headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
     result.success = False
     if res.json()["code"] == "SUCCESS":
         result.success = True
