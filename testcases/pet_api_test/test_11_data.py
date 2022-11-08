@@ -206,7 +206,10 @@ class TestData(object):
         for i in items:
             if i.get("item_id") == 116:
                 max_weight = i.get("number")
-                current_weight = max_weight
+                current_weight = max_weight  # 重置当前体重
+                break
+        if interval_time == 100:
+            interval_time = current_weight  # 设置该项主要是用于衰减值大于衰减上限时的测试
         gm = GM(token)
         gm.gm_weight(max_weight)
         gm.gm_hunger(hunger)
@@ -226,8 +229,8 @@ class TestData(object):
         elif hunger == 0:
             except_data = current_weight - weight_down * interval_time
             logger.info("每单位时间减少：{}点".format(weight_down))
-            if except_data < max_weight * (100-get_pet_config.get_WeightDownLimit()["max_reduce"])/100:
-                except_data = max_weight * (100-get_pet_config.get_WeightDownLimit()["max_reduce"])/100
+            if except_data < max_weight * (100 - get_pet_config.get_WeightDownLimit()["max_reduce"]) / 100:
+                except_data = max_weight * (100 - get_pet_config.get_WeightDownLimit()["max_reduce"]) / 100
             set_timestamp = now_timestamp - interval_time * weight_down_time
         elif hunger > 0:
             weight_up_config = get_pet_config.get_WeightUpMood()
