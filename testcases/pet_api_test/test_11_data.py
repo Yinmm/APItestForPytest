@@ -1,5 +1,3 @@
-import time
-
 import pytest
 import allure
 from operation.role import update
@@ -8,6 +6,7 @@ from common.redis_operate import redis_db
 from common.logger import logger
 from testcases.conftest import pet_data, account_id
 from data.pet.global_config import get_pet_config
+from operation.shit import *
 
 
 @allure.step("前置步骤 ==>> 设置数据")
@@ -101,7 +100,7 @@ class TestData(object):
             for i in items:
                 if i.get("item_id") == 101:
                     logger.info(
-                        "hunger ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
+                        "clean ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
                     assert i.get("number") == except_data
         else:
             logger.info("*************** 返回结果错误 ***************")
@@ -136,7 +135,7 @@ class TestData(object):
             for i in items:
                 if i.get("item_id") == 100:
                     logger.info(
-                        "hunger ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
+                        "mood ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
                     assert i.get("number") == except_data
         else:
             logger.info("*************** 返回结果错误 ***************")
@@ -184,7 +183,7 @@ class TestData(object):
             for i in items:
                 if i.get("item_id") == 113:
                     logger.info(
-                        "hunger ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
+                        "health ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
                     assert i.get("number") == except_data
         else:
             logger.info("*************** 返回结果错误 ***************")
@@ -257,8 +256,55 @@ class TestData(object):
             for i in items:
                 if i.get("item_id") == 115:
                     logger.info(
-                        "hunger ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
+                        "weight ==>> 期望结果：{}， 实际结果：{}".format(except_data, i.get("number")))
                     assert i.get("number") == except_data
+        else:
+            logger.info("*************** 返回结果错误 ***************")
+        logger.info("*************** 结束执行用例 ***************")
+
+    @allure.story("用例--屎生成数值测试")
+    @allure.description("该用例是屎生成数值的测试")
+    @pytest.mark.single
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("hunger_offset,is_online,is_work,interval_time", pet_data["test_shit_data"])
+    def test_shit_data(self, pet_login_hasrole_fixture, hunger_offset, is_online, is_work, interval_time):
+        logger.info("*************** 开始执行用例 ***************")
+        pet_info = pet_login_hasrole_fixture
+        token = pet_info["data"]["token"]
+        # 清除已有屎
+        shit_clean_all(token)
+        update(token)
+        now_system_timestamp = redis_db.get_system_timestamp(account_id)
+        now_shit_timestamp = now_system_timestamp
+        hunger_shit = get_pet_config.get_ShitTrigger()["hunger"]
+        hunger = hunger_shit+hunger_offset
+        gm = GM(token)
+        gm.gm_hunger(hunger)
+        gm.moditem_list()
+        shit_cd = get_pet_config.get_ShitCD()["ShitCD"]
+        shit_timestamp = int(now_shit_timestamp - shit_cd * interval_time)
+        if is_online == 1:  # 在线状态
+            if hunger_offset < 0 or is_work == 1:
+                except_data = 0
+            else:
+                except_data = int(interval_time)
+            redis_db.set_shit_timestamp(account_id, shit_timestamp)
+            redis_db.set_system_timestamp(account_id, shit_timestamp)
+        else:
+            pass
+        result = update(token)
+        # result = shit_info(token)
+        assert result.response.status_code == 200
+        if result.response.json().get("code") == "SUCCESS":
+            # shits = result.response.json().get("data")
+            shits = result.response.json().get("data").get("shits")
+            if shits is None:
+                shit_count = 0
+            else:
+                shit_count = len(shits)
+            logger.info(
+                "shit_count ==>> 期望结果：{}， 实际结果：{}".format(except_data, shit_count))
+            assert shit_count == except_data
         else:
             logger.info("*************** 返回结果错误 ***************")
         logger.info("*************** 结束执行用例 ***************")

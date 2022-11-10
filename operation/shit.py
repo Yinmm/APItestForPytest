@@ -38,7 +38,7 @@ def shit_clean(token, list):
         "Content-Type": "application/json",
         "token": token
     }
-    json_data =list
+    json_data = list
     res = shit.shit_clean(json=json_data, headers=header)
     if res.status_code != 200:
         logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
@@ -52,5 +52,14 @@ def shit_clean(token, list):
     logger.info("清理屎 ==>> 返回结果 ==>> {}".format(result.response.text))
     return result
 
-# print(login("1testt", "123456", "11"))
+
+def shit_clean_all(token):
+    result = shit_info(token)
+    shit_list = result.msg
+    list = []
+    for i in shit_list:
+        list.append(i["uid"])
+    if list == []:
+        return
+    shit_clean(token, list)
 

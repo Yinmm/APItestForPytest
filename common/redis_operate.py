@@ -105,6 +105,11 @@ class RedisDB():
         Dict = self.get_dict_db(key)
         return int(Dict["1_113"])
 
+    def get_system_timestamp(self, key):
+        key = "item_time:" + key
+        Dict = self.get_dict_db(key)
+        return int(Dict["system"])
+
     def set_hunger_timestamp(self, _key, value):
         key = "item_time:" + _key
         self.set_hash_value(key, "1_102", value)

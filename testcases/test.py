@@ -11,19 +11,3 @@
 #     dict[key]=value
 #     print(value)
 # wb.close()
-
-hunger=1
-mood =1
-clean = 1
-
-
-if hunger == 0 and mood == 0 and clean == 0:
-    print("都是0")
-elif (hunger == 0 and mood == 0) or (hunger == 0 and clean == 0) or (mood == 0 and clean == 0):
-    print("其中两个是0")
-elif hunger == 0 or mood == 0 or clean == 0:
-    print("有一个是0")
-elif hunger != 0 and mood != 0 and clean != 0:
-    print("都不是0")
-else:
-    print("出错")

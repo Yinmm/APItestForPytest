@@ -166,7 +166,7 @@ class PetGlobalConfig():
         """
         ShitTrigger = self.pet_global_config["ShitTrigger"]
         dict = {
-            "hunger": ShitTrigger
+            "hunger": int(ShitTrigger)
         }
         return dict
 
@@ -176,7 +176,7 @@ class PetGlobalConfig():
         """
         ShitCD = self.pet_global_config["ShitCD"]
         dict = {
-            "ShitCD": ShitCD
+            "ShitCD": int(ShitCD)
         }
         return dict
 
