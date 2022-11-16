@@ -1,1 +1,0 @@
-[{'number': 59, 'item_id': 102, 'class': 1}]

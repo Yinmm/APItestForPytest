@@ -3,8 +3,8 @@ from common.read_data import data
 import os
 curPath = os.path.abspath(os.path.dirname(__file__))
 # 获取项目根路径，内容为当前项目的名字
-rootPath = curPath[:curPath.find("PetApi_test\\")+len("PetApi_test\\")]
-last_path = os.path.abspath(os.path.join(rootPath, ".."))
+# rootPath = curPath[:curPath.find("PetApi_test\\")+len("PetApi_test\\")]
+last_path = os.path.abspath(os.path.join(curPath, "../../../"))
 
 
 class PetGlobalConfig():
