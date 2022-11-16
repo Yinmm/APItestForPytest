@@ -1,10 +1,15 @@
 import ast
 from common.read_data import data
+import os
+curPath = os.path.abspath(os.path.dirname(__file__))
+# 获取项目根路径，内容为当前项目的名字
+rootPath = curPath[:curPath.find("PetApi_test\\")+len("PetApi_test\\")]
+last_path = os.path.abspath(os.path.join(rootPath, ".."))
 
 
 class PetGlobalConfig():
     def __init__(self):
-        lua_xlsx = r"C:\Users\Administrator\Desktop\PetDoc\Config\Excel\LogicConfig\lua_GlobalConfig.xlsx"
+        lua_xlsx = last_path+r"\PetDoc\Config\Excel\LogicConfig\lua_GlobalConfig.xlsx"
         self.pet_global_config = data.load_lua_xlsx(lua_xlsx)
 
     def to_list(self, data):
