@@ -3,16 +3,16 @@ init_admin_user:
   password: "123456"
 
 #测试环境
+test_account_hasrole:
+  username: "test001"
+  password: "123456"
+  account_id: "6376f7cc02338aac771b5eb5"
+
+#本地环境
 #test_account_hasrole:
 #  username: "1test51"
 #  password: "123456"
-#  account_id: "6360bf8ef36c0134564db35c"
-
-#本地环境
-test_account_hasrole:
-  username: "1test51"
-  password: "123456"
-  account_id: "6376eebd189ec4fd1cef01e9"
+#  account_id: "6376eebd189ec4fd1cef01e9"
 
 test_account_norole:
   username: "1test99"

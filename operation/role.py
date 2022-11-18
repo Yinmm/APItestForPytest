@@ -37,7 +37,8 @@ def create(token, name, master_name):
     result = ResultBase()
     json_data = {
         "name": name,
-        "master_name": master_name
+        "master_name": master_name,
+        "pet_type_id": 1
     }
     header = {
         "Content-Type": "application/json",
