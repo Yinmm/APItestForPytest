@@ -1,0 +1,62 @@
+INFO     log:test_11_data.py:198 *************** 开始执行用例 ***************
+INFO     log:rest_client.py:51 接口请求地址 ==>> http://192.168.8.100:8088/account/update
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjkzNDM3MTksImp0aSI6IjYzNzZlZjY3MTg5ZWM0ZmQxY2VmMDFlZCIsImFpZCI6IjYzNzZlZWJkMTg5ZWM0ZmQxY2VmMDFlOSIsImV4Y2x1c2l2ZSI6dHJ1ZSwiaXNfY3JlYXRlX3BldCI6dHJ1ZX0.1D8eS4JCMK8t97-ADTUOzDHE4JN2w64u6yCV1Xjr-io"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> null
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:role.py:104 刷新宠物信息 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"items":[{"class":1,"item_id":100,"number":20},{"class":1,"item_id":101,"number":50},{"class":1,"item_id":102,"number":100},{"class":1,"item_id":113,"number":100},{"class":1,"item_id":115,"number":1440},{"class":1,"item_id":116,"number":1440}],"shits":null}}
+INFO     log:rest_client.py:51 接口请求地址 ==>> http://192.168.8.100:8088/gm/change_item_quantity_batch
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjkzNDM3MTksImp0aSI6IjYzNzZlZjY3MTg5ZWM0ZmQxY2VmMDFlZCIsImFpZCI6IjYzNzZlZWJkMTg5ZWM0ZmQxY2VmMDFlOSIsImV4Y2x1c2l2ZSI6dHJ1ZSwiaXNfY3JlYXRlX3BldCI6dHJ1ZX0.1D8eS4JCMK8t97-ADTUOzDHE4JN2w64u6yCV1Xjr-io"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> [
+    {
+        "number": 1440,
+        "item_id": 115,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 102,
+        "class": 1
+    },
+    {
+        "number": 0,
+        "item_id": 100,
+        "class": 1
+    },
+    {
+        "number": 100,
+        "item_id": 113,
+        "class": 1
+    }
+]
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:test_11_data.py:242 每单位时间加成百分点为-20
+INFO     log:test_11_data.py:243 每单位时间增加：8.0点
+INFO     log:test_11_data.py:28 前置步骤===>饥饿值-100,心情值-0,健康值-100,间隔时间(时间衰减单位)-10,预期结果-1520
+INFO     log:rest_client.py:51 接口请求地址 ==>> http://192.168.8.100:8088/account/update
+INFO     log:rest_client.py:52 接口请求方式 ==>> POST
+INFO     log:rest_client.py:54 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NjkzNDM3MTksImp0aSI6IjYzNzZlZjY3MTg5ZWM0ZmQxY2VmMDFlZCIsImFpZCI6IjYzNzZlZWJkMTg5ZWM0ZmQxY2VmMDFlOSIsImV4Y2x1c2l2ZSI6dHJ1ZSwiaXNfY3JlYXRlX3BldCI6dHJ1ZX0.1D8eS4JCMK8t97-ADTUOzDHE4JN2w64u6yCV1Xjr-io"
+}
+INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> null
+INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
+INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
+INFO     log:role.py:104 刷新宠物信息 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"items":[{"class":1,"item_id":101,"number":50},{"class":1,"item_id":102,"number":100},{"class":1,"item_id":113,"number":100},{"class":1,"item_id":115,"number":1520},{"class":1,"item_id":116,"number":1520},{"class":1,"item_id":100,"number":0}],"shits":null}}
+INFO     log:test_11_data.py:258 weight ==>> 期望结果：1520， 实际结果：1520
+INFO     log:test_11_data.py:263 *************** 结束执行用例 ***************

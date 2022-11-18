@@ -8,7 +8,7 @@ test_register_user:
 test_login_user:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
-  - [ "1test52", "123456", 1, "SUCCESS", { } ]
+#  - [ "1test52", "123456", 1, "SUCCESS", { } ]
   - [ "1test52", "1234567", 1, "PWD_INCORRECT", { } ]
 
 test_get_new_token:
