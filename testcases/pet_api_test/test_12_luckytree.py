@@ -1,0 +1,78 @@
+import pytest
+import allure
+from operation.luckytree import *
+from operation.gm import *
+from common.logger import logger
+from testcases.conftest import pet_data, account_id
+from common.redis_operate import redis_db
+
+@allure.severity(allure.severity_level.TRIVIAL)
+@allure.epic("针对单个接口的测试")
+@allure.feature("摇钱树模块")
+class TestCloth(object):
+    """摇钱树"""
+
+    @allure.story("用例--摇钱树信息")
+    @allure.description("该用例是摇钱树信息的测试")
+    @pytest.mark.single
+    @pytest.mark.smoke
+    # @pytest.mark.parametrize("is_clean_cloth, cloth_list, cloth_save_list, except_code, except_msg",
+    #                          pet_data["test_cloth_save"])
+    def test_luckytree_info(self, pet_login_hasrole_fixture):
+        logger.info("*************** 开始执行用例 ***************")
+        pet_info = pet_login_hasrole_fixture
+        token = pet_info["data"]["token"]
+        result = luckytree_info(token)
+        assert result.response.status_code == 200
+        # assert result.success == except_code, result.error
+        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format("SUCCESS", result.response.json().get("code")))
+        assert result.response.json().get("code") == "SUCCESS"
+        # assert except_msg in result.msg
+        logger.info("*************** 结束执行用例 ***************")
+
+
+
+    @allure.story("用例--摇钱树奖励")
+    @allure.description("该用例是获取摇钱树奖励的测试")
+    @pytest.mark.single
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("is_get, is_ad, except_msg",
+                             pet_data["test_luckytree"])
+    def test_luckytree_reward(self, pet_login_hasrole_fixture, is_get, is_ad, except_msg):
+        logger.info("*************** 开始执行用例 ***************")
+        key = "luckyTree:"+account_id
+        pet_info = pet_login_hasrole_fixture
+        token = pet_info["data"]["token"]
+        if is_get == 1:
+            redis_db.del_key(key)
+        if is_ad == 0:
+            ad = False
+        else:
+            ad = True
+        result = luckytree_reward(token, ad)
+        assert result.response.status_code == 200
+        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_msg, result.response.json().get("code")))
+        assert result.response.json().get("code") == except_msg
+        logger.info("*************** 结束执行用例 ***************")
+
+
+if __name__ == '__main__':
+    """
+    -k:可指定参数，参数为字符串格式，该字符串参数的目的是用来部分或全部匹配测试用例名称。使用该选项，pytest仅会收集测试用例名称中包含参数的测试用例执行测试
+    -m:用于执行符合指定标记的测试用例
+    -s:显示print内容
+    -x:遇到第一个失败用例即可终止测试
+    –maxfail=num:可以指定遇到第几个失败用例时，才会停止测试
+    -if:运行上一个测试中失败的用例
+    -ff:与–lf相比，会执行所有用例，但是会把之前失败的用例由优先执行
+    -v:可以使得测试输出更加详细。直观的一点，加上该选项，测试输出中会把用例名打印出来
+    -q:与-v的作用相反，会简化输出信息
+    -i:用例执行失败时，打印出其局部变量
+    """
+    pytest.main(['-q', 'test_05_work.py::TestWork::test_reward_work'])
+    # os.system(r"allure generate -c -o allure-report")
+    # pytest.main(["test_01_register.py", "--clean-alluredir"])
+
+    # allure generate ./json -o ./report --clean //生成测试报告
+    #
+    # allure open report --host 192.168.1.165 --port 8800 //打开报告 host = 本机ip

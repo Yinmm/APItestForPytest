@@ -2,34 +2,34 @@ test_register_user:
   # 用户名,密码,设备,期望结果,期望返回信息
   # username, password, hardware, except_code, except_msg
   - ["test", "123456", "1", "SUCCESS", {}]
-  - ["test001", "123456", "1", "USERNAME_EXIST", {}]
+  - ["1test001", "123456", "1", "USERNAME_EXIST", {}]
 
 
 test_login_user:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
-#  - [ "1test52", "123456", 1, "SUCCESS", { } ]
-  - [ "1test52", "1234567", 1, "PWD_INCORRECT", { } ]
+#  - [ "1test001", "123456", 1, "SUCCESS", { } ]
+  - [ "1test001", "1234567", 1, "PWD_INCORRECT", { } ]
 
 test_get_new_token:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
-  - [ "1test52", "123456", 1, "SUCCESS", { } ]
+  - [ "1test001", "123456", 1, "SUCCESS", { } ]
 
 test_init_type:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
-  - [ "1test52", "123456", 1, "SUCCESS", { } ]
+  - [ "1test001", "123456", 1, "SUCCESS", { } ]
 
 test_create:
   # 用户名，密码，设备，渠道，宠物名,角色名,期望结果,期望返回信息
   # username, password, hardware, channel, name, master_name, except_code, except_msg
-  - [ "apitest01", "123456", "1", 1, "" , "主人", "INVALID_PARAM", { } ]
-  - [ "apitest01", "123456", "1", 1, " " , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest01", "123456", "1", 1, "abcdabcdabcdabcda" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest01", "123456", "1", 1, "宠物宠物宠物宠物宠" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest01", "123456", "1", 1, "宠物宠物宠物宠物a" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest01", "123456", "1", 1, "宠物" , "宠物", "PET_AND_OWNER_HAS_SAME_NAME", { } ]
+  - [ "apitest02", "123456", "1", 1, "" , "主人", "INVALID_PARAM", { } ]
+  - [ "apitest02", "123456", "1", 1, " " , "主人", "INVALID_NICKNAME", { } ]
+  - [ "apitest02", "123456", "1", 1, "abcdabcdabcdabcda" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "apitest02", "123456", "1", 1, "宠物宠物宠物宠物宠" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "apitest02", "123456", "1", 1, "宠物宠物宠物宠物a" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "apitest02", "123456", "1", 1, "宠物" , "宠物", "PET_AND_OWNER_HAS_SAME_NAME", { } ]
 
 test_change_pet_name:
   # 宠物名,角色名,期望结果,期望返回信息
@@ -46,7 +46,7 @@ test_start_work:
   - [ 50, 50, 0, 50, "CLEAN_IS_0", { } ]
   - [ 50, 0, 50, 50, "MOOD_IS_0", { } ]
   - [ 50, 50, 50, 0, "HEALTH_IS_0", { } ]
-#  - [ 50, 50, 50, 50, "SUCCESS", { } ]
+  - [ 50, 50, 50, 50, "SUCCESS", { } ] #方便后续的召回打工
 
 test_item_use:
 # 前置金币数量,前置饥饿值,前置健康值,前置清洁值,前置心情值,使用物品类别,使用物品ID,期望结果,期望返回信息
@@ -147,4 +147,12 @@ test_shit_data:
 - [-1,1,0,1]
 - [-10,1,0,1]
 #- [0,0,0,1]
+
+test_luckytree:
+#是否可领取,true=1,false=0，是否看广告
+# is_get, is_ad, except_msg
+- [1,0,"SUCCESS"]
+- [0,0,"LUCKY_TREE_NO_REWARDS"]
+- [1,1,"SUCCESS"]
+- [0,1,"LUCKY_TREE_NO_REWARDS"]
 

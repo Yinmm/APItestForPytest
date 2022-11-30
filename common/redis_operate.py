@@ -59,6 +59,11 @@ class RedisDB():
             new_dict[key] = value
         return new_dict
 
+    #删除key
+    def del_key(self, key):
+        self.redis_conn.delete(key)
+
+
     # def set_dict_db(self, key, new_dict):
     #     dict = {}
     #     for key, value in new_dict.items():
@@ -66,6 +71,7 @@ class RedisDB():
     #         value = value.encode("utf-8")
     #         dict[key] = value
     #     self.redis_conn.hset(key, mapping=dict)
+
 
     def set_hash_value(self, name, key, value):
         try:
@@ -141,6 +147,9 @@ class RedisDB():
 
 
 redis_db = RedisDB(DB_CONF)
+# key = "luckyTree:637f2c22be4c994db6bc09c5"
+# redis_db.del_key(key)
+# print(redis_db.redis_conn.exists(key))
 # name = "6360bf8ef36c0134564db35c"
 # value = "1667783801"
 # set = redis_db.set_hunger_timestamp(name, value)

@@ -19,9 +19,10 @@ class Account(RestClient):
     def login(self, **kwargs):
         return self.post("/account/login", **kwargs)
 
-    #获取新token
+    # 获取新token
     def get_new_token(self, **kwargs):
         return self.post("/account/new_token", **kwargs)
+
 
 account = Account(api_root_url)
 
@@ -77,6 +78,7 @@ class Work(RestClient):
     # 打工召回
     def work_recall(self, **kwargs):
         return self.post("/work/recall", **kwargs)
+
 
 work = Work(api_root_url)
 
@@ -169,3 +171,17 @@ class Cloth(RestClient):
 
 
 cloth = Cloth(api_root_url)
+
+
+class LuckyTree(RestClient):
+    def __init__(self, api_root_url, **kwargs):
+        super(LuckyTree, self).__init__(api_root_url, **kwargs)
+
+    def luck_tree_info(self, **kwargs):
+        return self.post("/lucky_tree/info", **kwargs)
+
+    def luck_tree_rewards(self, **kwargs):
+        return self.post("/lucky_tree/rewards", **kwargs)
+
+
+LuckyTree = LuckyTree(api_root_url)

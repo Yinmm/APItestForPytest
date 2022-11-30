@@ -4,9 +4,9 @@ init_admin_user:
 
 #测试环境
 test_account_hasrole:
-  username: "test001"
+  username: "1test001"
   password: "123456"
-  account_id: "6376f7cc02338aac771b5eb5"
+  account_id: "638729b1908e1f770fddd689"
 
 #本地环境
 #test_account_hasrole:
