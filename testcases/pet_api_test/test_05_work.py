@@ -63,8 +63,6 @@ class TestWork(object):
 
     @allure.story("用例--领取打工奖励")
     @allure.description("该用例是领取打工奖励的测试")
-    # @allure.issue("https://www.cnblogs.com/wintest", name="点击，跳转到对应BUG的链接地址")
-    # @allure.testcase("https://www.cnblogs.com/wintest", name="点击，跳转到对应用例的链接地址")
     @pytest.mark.single
     @pytest.mark.smoke
     def test_reward_work(self, pet_login_hasrole_fixture):
@@ -79,6 +77,23 @@ class TestWork(object):
         assert result.response.json().get("code") == "NOT_HAVE_WORK_REWARD"
         # assert except_msg in result.msg
         logger.info("*************** 结束执行用例 ***************")
+
+    @allure.story("用例--打工召回")
+    @allure.description("该用例是打工召回的测试")
+    @pytest.mark.single
+    @pytest.mark.smoke
+    def test_recall_work(self, pet_login_hasrole_fixture):
+        logger.info("*************** 开始执行用例 ***************")
+        pet_info = pet_login_hasrole_fixture
+        token = pet_info["data"]["token"]
+        result = work_recall(token)
+        assert result.response.status_code == 200
+        # assert result.success == except_code, result.error
+        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format("NOT_WORKING", result.response.json().get("code")))
+        assert result.response.json().get("code") == "NOT_WORKING"
+        # assert except_msg in result.msg
+        logger.info("*************** 结束执行用例 ***************")
+
 
 
 

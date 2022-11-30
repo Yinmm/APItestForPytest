@@ -74,5 +74,30 @@ def work_reward(token):
     logger.info("获取工作奖励 ==>> 返回结果 ==>> {}".format(result.response.text))
     return result
 
+def work_recall(token):
+    """
+    工作中召回
+    :param token: token值
+    """
+    result = ResultBase()
+    header = {
+        "Content-Type": "application/json",
+        "token": token
+    }
+    res = work.work_recall(headers=header)
+    if res.status_code != 200:
+        logger.info("接口出错，状态码 ==>> {}".format(res.status_code))
+    result.success = False
+    if res.json()["code"] == "SUCCESS":
+        result.success = True
+    else:
+        result.error = "接口返回码是 【 {} 】, 返回信息：{} ".format(res.json()["code"], res.json()["data"])
+    result.msg = res.json()["data"]
+    result.response = res
+    logger.info("工作中召回 ==>> 返回结果 ==>> {}".format(result.response.text))
+    return result
+
+
+
 # print(login("1testt", "123456", "11"))
 

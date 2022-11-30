@@ -70,10 +70,13 @@ class Work(RestClient):
     def work_start(self, **kwargs):
         return self.post("/work/start", **kwargs)
 
-    # 开始打工
+    # 领取奖励
     def work_reward(self, **kwargs):
         return self.post("/work/reward", **kwargs)
 
+    # 打工召回
+    def work_recall(self, **kwargs):
+        return self.post("/work/recall", **kwargs)
 
 work = Work(api_root_url)
 

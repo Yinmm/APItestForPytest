@@ -230,6 +230,8 @@ class TestData(object):
             logger.info("每单位时间减少：{}点".format(weight_down))
             if except_data < max_weight * (100 - get_pet_config.get_WeightDownLimit()["max_reduce"]) / 100:
                 except_data = max_weight * (100 - get_pet_config.get_WeightDownLimit()["max_reduce"]) / 100
+            if except_data < get_pet_config.get_WeightRange()["min"]:
+                except_data = get_pet_config.get_WeightRange()["min"]
             set_timestamp = now_timestamp - interval_time * weight_down_time
         elif hunger > 0:
             weight_up_config = get_pet_config.get_WeightUpMood()
