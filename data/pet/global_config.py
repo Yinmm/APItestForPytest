@@ -140,8 +140,8 @@ class PetGlobalConfig():
         """
         WeightRange = self.pet_global_config["WeightRange"]
         dict = {
-            "min": WeightRange[0],
-            "max": WeightRange[1]
+            "min": int(WeightRange[0]),
+            "max": int(WeightRange[1])
         }
         return dict
 

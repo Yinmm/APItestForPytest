@@ -48,6 +48,12 @@ test_start_work:
   - [ 50, 50, 50, 0, "HEALTH_IS_0", { } ]
   - [ 50, 50, 50, 50, "SUCCESS", { } ] #方便后续的召回打工
 
+test_recall_work:
+# 期望结果
+# except_code
+- ["SUCCESS"]
+- ["NOT_WORKING"]
+
 test_item_use:
 # 前置金币数量,前置饥饿值,前置健康值,前置清洁值,前置心情值,使用物品类别,使用物品ID,期望结果,期望返回信息
 # gold,hunger,heath,clean,mood,Class, ID, except_code, except_msg

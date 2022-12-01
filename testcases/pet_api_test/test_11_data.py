@@ -245,8 +245,6 @@ class TestData(object):
                     logger.info("每单位时间增加：{}点".format(weight_up * ((100 + rate) / 100)))
                     break
             set_timestamp = now_timestamp - interval_time * weight_up_time
-        if except_data < 100:
-            except_data = 100
         redis_db.set_weight_timestamp(account_id, int(set_timestamp))
         redis_db.set_system_timestamp(account_id, int(set_timestamp))  # 系统时间也要一起修改
         step_weight_data_value(hunger, mood, health, interval_time, except_data)

@@ -1,7 +1,7 @@
 import pytest
 import allure
 from operation.account import register
-from testcases.conftest import pet_data
+from testcases.conftest import pet_data, base_data
 from common.logger import logger
 import time
 
@@ -32,7 +32,7 @@ class TestRegister(object):
                              pet_data["test_register_user"])
     def test_pet_register(self, username, password, hardware, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
-        if username != "1test51":
+        if username != base_data["test_account_hasrole"]["username"]:
             username = username+str(time.time())
         result = register(username, password, hardware)
         # print(result.__dict__)
