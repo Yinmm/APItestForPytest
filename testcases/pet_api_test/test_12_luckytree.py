@@ -3,7 +3,7 @@ import allure
 from operation.luckytree import *
 from operation.gm import *
 from common.logger import logger
-from testcases.conftest import pet_data, account_id
+from testcases.conftest import pet_data
 from common.redis_operate import redis_db
 
 @allure.severity(allure.severity_level.TRIVIAL)
@@ -40,9 +40,10 @@ class TestCloth(object):
                              pet_data["test_luckytree"])
     def test_luckytree_reward(self, pet_login_hasrole_fixture, is_get, is_ad, except_msg):
         logger.info("*************** 开始执行用例 ***************")
-        key = "luckyTree:"+account_id
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
+        key = "luckyTree:" + account_id
         if is_get == 1:
             redis_db.del_key(key)
         if is_ad == 0:

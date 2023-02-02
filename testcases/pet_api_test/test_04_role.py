@@ -1,3 +1,5 @@
+import time
+
 import pytest
 import allure
 from operation.role import *
@@ -7,7 +9,7 @@ from common.logger import logger
 
 @allure.step("前置步骤 ===> 用户注册+登录")
 def step_pet_register(username):
-    logger.info("前置步骤===>用户：{}注册+登录".format(username))
+    logger.info("前置步骤===>用户：{}注册+登录+实名".format(username))
 
 
 @allure.severity(allure.severity_level.TRIVIAL)
@@ -20,7 +22,7 @@ class TestRole(object):
     # @allure.issue("https://www.cnblogs.com/wintest", name="点击，跳转到对应BUG的链接地址")
     # @allure.testcase("https://www.cnblogs.com/wintest", name="点击，跳转到对应用例的链接地址")
     @pytest.mark.single
-    @pytest.mark.smoke
+    # @pytest.mark.smoke
     @pytest.mark.skip()
     @pytest.mark.parametrize("username, password, channel, except_code, except_msg",
                              pet_data["test_init_type"])
@@ -47,9 +49,13 @@ class TestRole(object):
     def test_create(self, username, password, hardware, channel, name, master_name, except_code, except_msg):
         logger.info("*************** 开始执行用例 ***************")
         step_pet_register(username)
+        username += str(time.time())
         register(username, password, hardware)
         login_info = login(username, password, channel)
         token = login_info.token
+        id_no = "445221200208221626"
+        personname = "test"
+        id_card_auth(token, str(time.time()), id_no, personname)
         result = create(token, name, master_name)
         # print(result.__dict__)
         assert result.response.status_code == 200

@@ -1,0 +1,95 @@
+[2023-02-02 16:57:48,065][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/account/register
+[2023-02-02 16:57:48,065][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,066][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+[2023-02-02 16:57:48,066][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,066][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,066][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "username": "1test002",
+    "password": "123456",
+    "hardware": "1"
+}
+[2023-02-02 16:57:48,066][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,066][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:48,220][account.py 32][INFO]: 注册用户 ==>> 返回结果 ==>> {"code":"USERNAME_EXIST","data":{}}
+[2023-02-02 16:57:48,220][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/account/login
+[2023-02-02 16:57:48,220][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,220][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+[2023-02-02 16:57:48,220][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,220][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,220][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "username": "1test002",
+    "password": "123456",
+    "channel": 1
+}
+[2023-02-02 16:57:48,220][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,220][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:48,364][account.py 61][INFO]: 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"63db6314d02d389966601cc7","can_play":true,"id_card_type":1,"role_created":true,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzMwNjgsImp0aSI6IjYzZGI3YjBjZDAyZDM4OTk2NjYwMWQ0ZiIsImFpZCI6IjYzZGI2MzE0ZDAyZDM4OTk2NjYwMWNjNyJ9.SesY_H3-zKRZ19FCfP-EuWRdkLYbSx9TQZFNI2k4M_A","widget_install_rewards":false}}
+[2023-02-02 16:57:48,364][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/account/id_card_auth
+[2023-02-02 16:57:48,364][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,364][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzMwNjgsImp0aSI6IjYzZGI3YjBjZDAyZDM4OTk2NjYwMWQ0ZiIsImFpZCI6IjYzZGI2MzE0ZDAyZDM4OTk2NjYwMWNjNyJ9.SesY_H3-zKRZ19FCfP-EuWRdkLYbSx9TQZFNI2k4M_A"
+}
+[2023-02-02 16:57:48,364][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,364][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,364][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "op_id": "1675328268.3649328",
+    "id_no": "445221200208221626",
+    "name": "test"
+}
+[2023-02-02 16:57:48,364][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,365][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:48,516][account.py 115][INFO]: 实名认证 ==>> 返回结果 ==>> {"code":"ACCOUNT_ID_CARD_EXIST","data":{}}
+[2023-02-02 16:57:48,517][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/pet/create
+[2023-02-02 16:57:48,518][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,518][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzMwNjgsImp0aSI6IjYzZGI3YjBjZDAyZDM4OTk2NjYwMWQ0ZiIsImFpZCI6IjYzZGI2MzE0ZDAyZDM4OTk2NjYwMWNjNyJ9.SesY_H3-zKRZ19FCfP-EuWRdkLYbSx9TQZFNI2k4M_A"
+}
+[2023-02-02 16:57:48,518][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,518][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,518][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "name": "pet",
+    "master_name": "master",
+    "pet_type_id": 1
+}
+[2023-02-02 16:57:48,518][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,518][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:48,662][role.py 57][INFO]: 创建角色 ==>> 返回结果 ==>> {"code":"PET_FOUND","data":{}}
+[2023-02-02 16:57:48,712][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/account/login
+[2023-02-02 16:57:48,712][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,712][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json"
+}
+[2023-02-02 16:57:48,712][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,713][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,713][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "username": "1test002",
+    "password": "123456",
+    "channel": 1
+}
+[2023-02-02 16:57:48,713][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,713][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:48,834][account.py 61][INFO]: 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"63db6314d02d389966601cc7","can_play":true,"id_card_type":1,"role_created":true,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzMwNjksImp0aSI6IjYzZGI3YjBkZDAyZDM4OTk2NjYwMWQ1MCIsImFpZCI6IjYzZGI2MzE0ZDAyZDM4OTk2NjYwMWNjNyJ9.t1P7UV_9hzcvor58-yzB8jvVgrCJnDPYjj6f3ME2vC0","widget_install_rewards":false}}
+[2023-02-02 16:57:48,835][conftest.py 71][INFO]: 前置步骤===>用户：1test002注册-登录-实名-创建角色
+[2023-02-02 16:57:48,840][test_12_luckytree.py 42][INFO]: *************** 开始执行用例 ***************
+[2023-02-02 16:57:48,973][rest_client.py 51][INFO]: 接口请求地址 ==>> https://test-api.qingheer.com/lucky_tree/rewards
+[2023-02-02 16:57:48,974][rest_client.py 52][INFO]: 接口请求方式 ==>> POST
+[2023-02-02 16:57:48,974][rest_client.py 54][INFO]: 接口请求头 ==>> {
+    "Content-Type": "application/json",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzMwNjksImp0aSI6IjYzZGI3YjBkZDAyZDM4OTk2NjYwMWQ1MCIsImFpZCI6IjYzZGI2MzE0ZDAyZDM4OTk2NjYwMWNjNyJ9.t1P7UV_9hzcvor58-yzB8jvVgrCJnDPYjj6f3ME2vC0"
+}
+[2023-02-02 16:57:48,975][rest_client.py 55][INFO]: 接口请求 params 参数 ==>> null
+[2023-02-02 16:57:48,975][rest_client.py 56][INFO]: 接口请求体 data 参数 ==>> null
+[2023-02-02 16:57:48,975][rest_client.py 57][INFO]: 接口请求体 json 参数 ==>> {
+    "is_ad": false
+}
+[2023-02-02 16:57:48,975][rest_client.py 58][INFO]: 接口上传附件 files 参数 ==>> None
+[2023-02-02 16:57:48,976][rest_client.py 59][INFO]: 接口 cookies 参数 ==>> null
+[2023-02-02 16:57:49,112][luckytree.py 53][INFO]: 获取摇钱树奖励 ==>> 返回结果 ==>> {"code":"SUCCESS","data":[{"class":1,"item_id":1,"incr":300,"number":54250}]}
+[2023-02-02 16:57:49,112][test_12_luckytree.py 55][INFO]: code ==>> 期望结果：SUCCESS， 实际结果：SUCCESS
+[2023-02-02 16:57:49,112][test_12_luckytree.py 57][INFO]: *************** 结束执行用例 ***************

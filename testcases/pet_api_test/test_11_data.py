@@ -4,7 +4,7 @@ from operation.role import update
 from operation.gm import *
 from common.redis_operate import redis_db
 from common.logger import logger
-from testcases.conftest import pet_data, account_id
+from testcases.conftest import pet_data
 from data.pet.global_config import get_pet_config
 from operation.shit import *
 
@@ -45,6 +45,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         update(token)
         gm = GM(token)
         gm.gm_hunger(init_value)
@@ -80,6 +81,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         update(token)
         gm = GM(token)
         gm.gm_clean(init_value)
@@ -115,6 +117,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         update(token)
         gm = GM(token)
         gm.gm_mood(init_value)
@@ -150,6 +153,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         update(token)
         gm = GM(token)
         gm.gm_hunger(hunger)
@@ -198,6 +202,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         re = update(token)
         items = re.response.json().get("data").get("items")
         current_weight = 0
@@ -271,6 +276,7 @@ class TestData(object):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
+        account_id = pet_info["data"]["account_id"]
         # 清除已有屎
         shit_clean_all(token)
         update(token)

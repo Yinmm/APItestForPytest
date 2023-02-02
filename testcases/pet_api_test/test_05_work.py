@@ -82,7 +82,7 @@ class TestWork(object):
     @allure.description("该用例是打工召回的测试")
     @pytest.mark.single
     @pytest.mark.smoke
-    @pytest.mark.parametrize("except_code", pet_data["test_recall_work"][0])
+    @pytest.mark.parametrize("except_code", pet_data["test_recall_work"])
     def test_recall_work(self, pet_login_hasrole_fixture, except_code):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
@@ -90,8 +90,8 @@ class TestWork(object):
         result = work_recall(token)
         assert result.response.status_code == 200
         # assert result.success == except_code, result.error
-        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code, result.response.json().get("code")))
-        assert result.response.json().get("code") == except_code
+        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code[0], result.response.json().get("code")))
+        assert result.response.json().get("code") == except_code[0]
         # assert except_msg in result.msg
         logger.info("*************** 结束执行用例 ***************")
 
