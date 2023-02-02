@@ -18,7 +18,7 @@ DB_CONF = {
 }
 
 
-class RedisDB():
+class RedisDB:
 
     def __init__(self, db_conf=DB_CONF):
         try:

@@ -1,5 +1,3 @@
-import gzip
-
 from bson import ObjectId
 import os
 from pymongo import MongoClient
@@ -25,10 +23,7 @@ class MongoDB:
             # 建立连接
             self.url = URL
             self.conn = MongoClient(self.url, password=password, username=user, authSource=db)
-            list = self.conn.list_database_names()
-            print(list)
-            self.db = self.conn[db]
-            print(self.db)
+            self.db = self.conn[db]cd
         except Exception as e:
             logger.info("连接mongodb出现错误，错误原因：{}".format(e))
 
@@ -43,11 +38,6 @@ class MongoDB:
 
     def update(self, coll="account", acid=''):
         ret = self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}})
-        # # 指定集合
-        # collection = self.db[coll]
-        # condition = {'_id': ObjectId(acid)}
-        # edit = {'gm': True}
-        # ret = collection.update_one(condition, {'$set': edit})
         print('update:', ret.matched_count, ret.modified_count)
         # pass
 
@@ -61,5 +51,5 @@ class MongoDB:
 # print(set)
 
 mongodb = MongoDB()
-#
+
 # test.update("account", "63db0e5852addd586045fcee")

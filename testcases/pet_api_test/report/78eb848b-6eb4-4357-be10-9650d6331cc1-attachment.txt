@@ -7,7 +7,7 @@ INFO     log:rest_client.py:54 接口请求头 ==>> {
 INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
 INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
 INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
-    "username": "test1675329941.4433777",
+    "username": "test1675332584.5922644",
     "password": "123456",
     "hardware": "1"
 }
@@ -22,23 +22,23 @@ INFO     log:rest_client.py:54 接口请求头 ==>> {
 INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
 INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
 INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
-    "username": "test1675329941.4433777",
+    "username": "test1675332584.5922644",
     "password": "123456",
     "channel": 1
 }
 INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
 INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
-INFO     log:account.py:61 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"63db8196d02d389966601d5e","can_play":false,"id_card_type":0,"role_created":false,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzQ3NDIsImp0aSI6IjYzZGI4MTk2ZDAyZDM4OTk2NjYwMWQ1ZiIsImFpZCI6IjYzZGI4MTk2ZDAyZDM4OTk2NjYwMWQ1ZSJ9.tX3xHquZrQ42KC9aZziq-yIqD0zEmqqe5EK0tPU3V9s","widget_install_rewards":false}}
+INFO     log:account.py:61 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"63db8be9d02d389966601e20","can_play":false,"id_card_type":0,"role_created":false,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzczODUsImp0aSI6IjYzZGI4YmU5ZDAyZDM4OTk2NjYwMWUyMSIsImFpZCI6IjYzZGI4YmU5ZDAyZDM4OTk2NjYwMWUyMCJ9.4g3kmgNEJj2b3pJZxRx2hXdr76At9I0WyhwQLWwVcIY","widget_install_rewards":false}}
 INFO     log:rest_client.py:51 接口请求地址 ==>> https://test-api.qingheer.com/account/id_card_auth
 INFO     log:rest_client.py:52 接口请求方式 ==>> POST
 INFO     log:rest_client.py:54 接口请求头 ==>> {
     "Content-Type": "application/json",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzQ3NDIsImp0aSI6IjYzZGI4MTk2ZDAyZDM4OTk2NjYwMWQ1ZiIsImFpZCI6IjYzZGI4MTk2ZDAyZDM4OTk2NjYwMWQ1ZSJ9.tX3xHquZrQ42KC9aZziq-yIqD0zEmqqe5EK0tPU3V9s"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzU5MzczODUsImp0aSI6IjYzZGI4YmU5ZDAyZDM4OTk2NjYwMWUyMSIsImFpZCI6IjYzZGI4YmU5ZDAyZDM4OTk2NjYwMWUyMCJ9.4g3kmgNEJj2b3pJZxRx2hXdr76At9I0WyhwQLWwVcIY"
 }
 INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
 INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
 INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
-    "op_id": "op_id1675329941.752278",
+    "op_id": "op_id1675332584.8798406",
     "id_no": "441781200005096220",
     "name": "wan"
 }
