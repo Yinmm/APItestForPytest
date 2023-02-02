@@ -23,7 +23,7 @@ class MongoDB:
             # 建立连接
             self.url = URL
             self.conn = MongoClient(self.url, password=password, username=user, authSource=db)
-            self.db = self.conn[db]cd
+            self.db = self.conn[db]
         except Exception as e:
             logger.info("连接mongodb出现错误，错误原因：{}".format(e))
 
