@@ -47,7 +47,7 @@ def login(username, password, channel):
         "channel": channel
     }
     header = {
-         "Content-Type": "application/json"
+        "Content-Type": "application/json"
     }
     res = account.login(json=json_data, headers=header)
     result.success = False
@@ -85,5 +85,34 @@ def get_new_token(token):
     return result
 
 
-# register("tt123", "12345", "1")
+def id_card_auth(token, op_id, id_no, name):
+    """
+    实名认证
+    :param token
+    :param op_id: 操作码cd
+    :param id_no: 身份证号码
+    :param name: 姓名
+    :return: 自定义的关键字返回结果 result
+    """
+    result = ResultBase()
+    header = {
+        "Content-Type": "application/json",
+        "token": token
+    }
+    json_data = {
+        "op_id": op_id,
+        "id_no": id_no,
+        "name": name
+    }
+    res = account.id_card_auth(json=json_data, headers=header)
+    result.success = False
+    if res.json()["code"] == "SUCCESS":
+        result.success = True
+    else:
+        result.error = "接口返回码是 【 {} 】, 返回信息：{} ".format(res.json()["code"], res.json()["data"])
+    result.msg = res.json()["data"]
+    result.response = res
+    logger.info("实名认证 ==>> 返回结果 ==>> {}".format(result.response.text))
+    return result
 
+# register("tt123", "12345", "1")

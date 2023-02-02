@@ -8,13 +8,14 @@ test_register_user:
 test_login_user:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
-#  - [ "1test001", "123456", 1, "SUCCESS", { } ]
+  - [ "1test001", "123456", 1, "SUCCESS", { } ]
   - [ "1test001", "1234567", 1, "PWD_INCORRECT", { } ]
 
 test_get_new_token:
   # 用户名,密码,渠道,期望结果,期望返回信息
   # username, password, channel, except_code, except_msg
   - [ "1test001", "123456", 1, "SUCCESS", { } ]
+
 
 test_init_type:
   # 用户名,密码,渠道,期望结果,期望返回信息
@@ -24,12 +25,13 @@ test_init_type:
 test_create:
   # 用户名，密码，设备，渠道，宠物名,角色名,期望结果,期望返回信息
   # username, password, hardware, channel, name, master_name, except_code, except_msg
-  - [ "apitest02", "123456", "1", 1, "" , "主人", "INVALID_PARAM", { } ]
-  - [ "apitest02", "123456", "1", 1, " " , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest02", "123456", "1", 1, "abcdabcdabcdabcda" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest02", "123456", "1", 1, "宠物宠物宠物宠物宠" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest02", "123456", "1", 1, "宠物宠物宠物宠物a" , "主人", "INVALID_NICKNAME", { } ]
-  - [ "apitest02", "123456", "1", 1, "宠物" , "宠物", "PET_AND_OWNER_HAS_SAME_NAME", { } ]
+  - [ "test", "123456", "1", 1, "" , "主人", "INVALID_PARAM", { } ]
+  - [ "test", "123456", "1", 1, " " , "主人", "INVALID_NICKNAME", { } ]
+  - [ "test", "123456", "1", 1, "abcdabcdabcdabcda" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "test", "123456", "1", 1, "宠物宠物宠物宠物宠" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "test", "123456", "1", 1, "宠物宠物宠物宠物a" , "主人", "INVALID_NICKNAME", { } ]
+  - [ "test", "123456", "1", 1, "宠物" , "宠物", "PET_AND_OWNER_HAS_SAME_NAME", { } ]
+  - [ "test", "123456", "1", 1, "宠物" , "主人", "SUCCESS", { } ]
 
 test_change_pet_name:
   # 宠物名,角色名,期望结果,期望返回信息
@@ -49,10 +51,10 @@ test_start_work:
   - [ 50, 50, 50, 50, "SUCCESS", { } ] #方便后续的召回打工
 
 test_recall_work:
-# 期望结果
-# except_code
-- ["SUCCESS"]
-- ["NOT_WORKING"]
+  # 期望结果
+  # except_code
+  - ["SUCCESS"]
+  - ["NOT_WORKING"]
 
 test_item_use:
 # 前置金币数量,前置饥饿值,前置健康值,前置清洁值,前置心情值,使用物品类别,使用物品ID,期望结果,期望返回信息
@@ -72,15 +74,15 @@ test_item_use:
 test_item_buy:
 # 前置金币数量,是否先清除服装：是—1，否-0, 是否先清除家具：是—1，否-0,购买物品类别（4-家具（11*，12*为地板和墙纸），3-服装）,购买物品ID，购买数量,期望结果,期望返回信息
 # gold, cloth, furniture, Class, ID, number, except_code, except_msg
-- [ 10, 0, 0, 4, 1304 , 1, "ITEM_NOT_ENOUGH", { } ]
-- [ 900, 0, 0, 4, 1304 , 1, "SUCCESS", { } ]
-- [ 1800, 0, 0, 4, 1304 , 2, "SUCCESS", { } ]
-- [ 50000, 0, 1, 4, 1101 , 1, "SUCCESS", { } ]
-- [ 50000, 0, 0, 4, 1101 , 1, "ITEM_REPEAT_BUY", { } ]
-- [ 50000, 0, 1, 4, 1101 , 2, "ITEM_BUY_ONLY_ONE", { } ]
-- [ 50000, 0, 1, 4, 1201 , 1, "SUCCESS", { } ]
-- [ 50000, 0, 0, 4, 1201 , 1, "ITEM_REPEAT_BUY", { } ]
-- [ 50000, 0, 1, 4, 1201 , 2, "ITEM_BUY_ONLY_ONE", { } ]
+- [ 10, 0, 0, 4, 201101 , 1, "ITEM_NOT_ENOUGH", { } ]
+- [ 900, 0, 0, 4, 201101 , 1, "SUCCESS", { } ]
+- [ 1800, 0, 0, 4, 201101 , 2, "SUCCESS", { } ]
+- [ 50000, 0, 1, 4, 101101 , 1, "SUCCESS", { } ]
+- [ 50000, 0, 0, 4, 101101 , 1, "ITEM_REPEAT_BUY", { } ]
+- [ 50000, 0, 1, 4, 101101 , 2, "ITEM_BUY_ONLY_ONE", { } ]
+- [ 50000, 0, 1, 4, 102101 , 1, "SUCCESS", { } ]
+- [ 50000, 0, 0, 4, 102101 , 1, "ITEM_REPEAT_BUY", { } ]
+- [ 50000, 0, 1, 4, 102101 , 2, "ITEM_BUY_ONLY_ONE", { } ]
 - [ 1000, 1, 0, 3, 2011 , 1, "ITEM_NOT_ENOUGH", { } ]
 - [ 1500, 1, 0, 3, 2011 , 1, "SUCCESS", { } ]
 - [ 50000, 1, 0, 3, 2011 , 1, "SUCCESS", { } ]
@@ -164,3 +166,9 @@ test_luckytree:
 - [1,1,"SUCCESS"]
 - [0,1,"LUCKY_TREE_NO_REWARDS"]
 
+
+test_id_card_auth:
+  # 用户名,密码,渠道,操作码,身份证,身份证号,期望结果,期望返回信息
+  # username, password, channel, op_id, id_no, name, except_code, except_msg
+  - [ "test", "123456", 1,"op_id", "441781200005096210","wan","ID_NO_INVALID", { } ]
+  - [ "test", "123456", 1,"op_id", "441781200005096220","wan","SUCCESS", { } ]

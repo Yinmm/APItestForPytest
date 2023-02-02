@@ -23,6 +23,10 @@ class Account(RestClient):
     def get_new_token(self, **kwargs):
         return self.post("/account/new_token", **kwargs)
 
+    # 实名认证
+    def id_card_auth(self, **kwargs):
+        return self.post("/account/id_card_auth", **kwargs)
+
 
 account = Account(api_root_url)
 
@@ -185,3 +189,4 @@ class LuckyTree(RestClient):
 
 
 LuckyTree = LuckyTree(api_root_url)
+

@@ -1,9 +1,12 @@
+import time
+
 import pytest
 import os
 import allure
-from api.pet_V2 import account
+# from api.pet_V2 import account
 from api.user import user
-from common.mysql_operate import db
+from operation import account, role
+from common.mongodb_operate import mongodb
 from common.read_data import data
 from common.logger import logger
 
@@ -23,7 +26,8 @@ def get_data(yaml_file_name):
 base_data = get_data("base_data.yml")
 pet_data = get_data("pet/pet_test_data.yml")
 
-account_id = base_data["test_account_hasrole"]["account_id"]
+
+# account_id = base_data["test_account_hasrole"]["account_id"]
 
 @allure.step("前置步骤 ==>> 清理数据")
 def step_first():
@@ -64,24 +68,33 @@ def step_pet_register(username):
 
 @allure.step("前置步骤 ===> 用户登录")
 def step_pet_login(username):
-    logger.info("前置步骤===>用户：{}登录".format(username))
+    logger.info("前置步骤===>用户：{}注册-登录-实名-创建角色".format(username))
 
 
 @pytest.fixture(scope="session")
 def pet_login_hasrole_fixture():
     username = base_data["test_account_hasrole"]["username"]
     password = base_data["test_account_hasrole"]["password"]
-    json_data = {
-        "username": username,
-        "password": password,
-        "channel": 1
-    }
-    header = {
-         "Content-Type": "application/json"
-    }
-    loginInfo = account.login(json=json_data,headers=header)
+    # 注册
+    account.register(username, password, "1")
+    # 登录
+    res = account.login(username, password, 1)
+    loginInfo = res.response.json()
+    id_no = "445221200208221626"
+    personname = "test"
+    token = loginInfo["data"]["token"]
+    acid = loginInfo["data"]["account_id"]
+    # 实名
+    account.id_card_auth(token, str(time.time()), id_no, personname)
+    # 创角
+    role.create(token, "pet", "master")
+    # 添加GM权限
+    mongodb.update(acid=acid)
+    #再次登录
+    res = account.login(username, password, 1)
+    loginInfo = res.response.json()
     step_pet_login(username)
-    yield loginInfo.json()
+    yield loginInfo
 
 
 @pytest.fixture(scope="session")
@@ -97,7 +110,7 @@ def pet_login_norole_fixture(username, password, hardware, channel):
         "hardware": channel
     }
     header = {
-         "Content-Type": "application/json"
+        "Content-Type": "application/json"
     }
     account.register(json=register_data, headers=header)
     loginInfo = account.login(json=login_data, headers=header)
@@ -118,4 +131,3 @@ def delete_register_user():
     step_last()
     logger.info("注册用户操作：删除注册的用户")
     logger.info("执行后置SQL：{}".format(del_sql))
-

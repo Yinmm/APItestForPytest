@@ -14,7 +14,8 @@ class GM(object):
     def get_item_list(self):
         header = {
             "Content-Type": "application/json",
-            "token": self.token
+            "token": self.token,
+            "Game-Manager-Auth": "o3vsikdFDJQhOjXsQrJEajV3rZ0q8hnJcPnYvpMZaP2M6Uuu6rHPeD3GvGfaPuUM"
         }
         res = item.item_list(headers=header)
         return res.json()["data"]["items"]
@@ -28,7 +29,8 @@ class GM(object):
         result = ResultBase()
         header = {
             "Content-Type": "application/json",
-            "token": self.token
+            "token": self.token,
+            "Game-Manager-Auth": "o3vsikdFDJQhOjXsQrJEajV3rZ0q8hnJcPnYvpMZaP2M6Uuu6rHPeD3GvGfaPuUM"
         }
         res = gm.gm(json=data_json, headers=header)
         result.success = False
@@ -47,8 +49,10 @@ class GM(object):
             "Content-Type": "application/json",
             "token": self.token
         }
-        print(self.data_json_list)
-        res = gm.gm_list(json=self.data_json_list, headers=header)
+        data_json = {
+            "items": self.data_json_list
+        }
+        res = gm.gm_list(json=data_json, headers=header)
         result.success = False
         if res.json()["code"] == "SUCCESS":
             result.success = True
