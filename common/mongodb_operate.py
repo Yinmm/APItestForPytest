@@ -37,8 +37,8 @@ class MongoDB:
         print(a)
 
     def update(self, coll="account", acid=''):
-        ret = self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}})
-        print('update:', ret.matched_count, ret.modified_count)
+        self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}})
+        self.conn.close()
         # pass
 
 
@@ -52,4 +52,5 @@ class MongoDB:
 
 mongodb = MongoDB()
 
+mongodb.update(acid="63db0e5852addd586045fcee")
 # test.update("account", "63db0e5852addd586045fcee")

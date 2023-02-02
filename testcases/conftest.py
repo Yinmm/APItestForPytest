@@ -71,7 +71,7 @@ def step_pet_login(username):
     logger.info("前置步骤===>用户：{}注册-登录-实名-创建角色".format(username))
 
 
-@pytest.fixture(scope="function")
+@pytest.fixture(scope="session")
 def pet_login_hasrole_fixture():
     username = base_data["test_account_hasrole"]["username"]
     password = base_data["test_account_hasrole"]["password"]
