@@ -3,7 +3,7 @@ import allure
 from operation.cloth import *
 from operation.gm import *
 from common.logger import logger
-from testcases.conftest import pet_data
+from testcases.conftest import pet_data, get_pet_config
 
 
 @allure.severity(allure.severity_level.TRIVIAL)
@@ -18,16 +18,80 @@ class TestCloth(object):
     @pytest.mark.smoke
     @pytest.mark.parametrize("is_clean_cloth, cloth_list, cloth_save_list, except_code, except_msg",
                              pet_data["test_cloth_save"])
-    def test_cloth_save(self, pet_login_hasrole_fixture, is_clean_cloth, cloth_list, cloth_save_list, except_code, except_msg):
+    def test_cloth_save(self, pet_login_hasrole_fixture, is_clean_cloth, cloth_list, cloth_save_list, except_code,
+                        except_msg):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
+        item_list_cloth = get_pet_config.get_ClothesItemConfig()
         token = pet_info["data"]["token"]
+        save_dict = {}
+        value = 999
+        for i in cloth_save_list:
+            for j in item_list_cloth:
+                if i == j["Type"]:
+                    if value == j["ID"]:
+                        save_dict[i] = value
+                    else:
+                        save_dict[i] = j["ID"]
+                    break
+                if i == value:
+                    save_dict["20"] = value  # 物品不存在的验证
+                    break
+
         gm = GM(token)
         if is_clean_cloth == 1:
             gm.gm_clean_cloth()
-        gm.gm_get_cloth(cloth_list)
+        set_cloth_list = []
+        for i in cloth_list:
+            for j in item_list_cloth:
+                if i == j["Type"]:
+                    set_cloth_list.append(j["ID"])
+                    break
+        gm.gm_get_cloth(set_cloth_list)
         gm.moditem_list()
-        result = cloth_save(token, cloth_save_list)
+        result = cloth_save(token, save_dict)
+        assert result.response.status_code == 200
+        # assert result.success == except_code, result.error
+        logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code, result.response.json().get("code")))
+        assert result.response.json().get("code") == except_code
+        # assert except_msg in result.msg
+        logger.info("*************** 结束执行用例 ***************")
+
+    @allure.story("用例--套装穿戴保存")
+    @allure.description("该用例是套装穿戴保存的测试")
+    @pytest.mark.single
+    @pytest.mark.smoke
+    @pytest.mark.parametrize("is_clean_cloth, cloth_list, exclude_list, cloth_save_list, except_code, except_msg",
+                             pet_data["test_cloth_save_suit"])
+    def test_cloth_save_suit(self, pet_login_hasrole_fixture, is_clean_cloth, cloth_list, exclude_list, cloth_save_list,
+                             except_code, except_msg):
+        logger.info("*************** 开始执行用例 ***************")
+        pet_info = pet_login_hasrole_fixture
+        item_list_cloth = get_pet_config.get_ClothesItemConfig()
+        token = pet_info["data"]["token"]
+        save_dict = {}
+        set_cloth_list = []
+        if exclude_list == []:
+            exclude_list = None
+        for i in cloth_save_list:
+            for j in item_list_cloth:
+                if i == j["Type"]:
+                    if i == 20:
+                        if exclude_list == j["SuitContain"]:
+                            save_dict[i] = j["ID"]
+                            set_cloth_list.append(j["ID"])
+                            break
+                        continue
+                    save_dict[i] = j["ID"]
+                    set_cloth_list.append(j["ID"])
+                    break
+
+        gm = GM(token)
+        if is_clean_cloth == 1:
+            gm.gm_clean_cloth()
+        gm.gm_get_cloth(set_cloth_list)
+        gm.moditem_list()
+        result = cloth_save(token, save_dict)
         assert result.response.status_code == 200
         # assert result.success == except_code, result.error
         logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code, result.response.json().get("code")))

@@ -1,0 +1,9 @@
+{
+	"Data": [
+		{"ID":1,"Name":90000,"Description":90010,"LowModelRes":"cat_low","HighModelRes":"cat_high","Material":"Cat","InteractAnim":"PetCatInteractAnimator","Icon":"kitty","FullBodyImage":"quanshen_kitty","CreateUIIcon":"createui_kitty","CreateUIHeadIcon":"xuanjue_kitty","HeadIcon":"d_kitty","MainHeadIcon":"main_icon_kitty"},
+		{"ID":2,"Name":90001,"Description":90011,"LowModelRes":"dog_low","HighModelRes":"dog_high","Material":"Dog","InteractAnim":"PetDogInteractAnimator","Icon":"dog","FullBodyImage":"quanshen_dog","CreateUIIcon":"createui_dog","CreateUIHeadIcon":"xuanjue_dog","HeadIcon":"d_dog","MainHeadIcon":"main_icon_dog"},
+		{"ID":3,"Name":90002,"Description":90012,"LowModelRes":"panda_low","HighModelRes":"panda_high","Material":"Panda","InteractAnim":"PetPandaInteractAnimator","Icon":"panda","FullBodyImage":"quanshen_panda","CreateUIIcon":"createui_panda","CreateUIHeadIcon":"xuanjue_panda","HeadIcon":"d_panda","MainHeadIcon":"main_icon_panda"},
+		{"ID":4,"Name":90003,"Description":90013,"LowModelRes":"crocodile_low","HighModelRes":"crocodile_high","Material":"Crocodile","InteractAnim":"PetCrocodileInteractAnimator","Icon":"crocodile","FullBodyImage":"quanshen_crocodile","CreateUIIcon":"createui_crocodile","CreateUIHeadIcon":"xuanjue_crocodile","HeadIcon":"d_crocodile","MainHeadIcon":"main_icon_crocodile"},
+		{"ID":5,"Name":90004,"Description":90014,"LowModelRes":"rabbit_low","HighModelRes":"rabbit_high","Material":"Rabbit","InteractAnim":"PetRabbitInteractAnimator","Icon":"rabbit","FullBodyImage":"quanshen_rabbit","CreateUIIcon":"createui_rabbit","CreateUIHeadIcon":"xuanjue_rabbit","HeadIcon":"d_rabbit","MainHeadIcon":"main_icon_rabbit"}	
+	]
+}

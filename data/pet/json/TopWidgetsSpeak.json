@@ -1,0 +1,27 @@
+{
+	"Data": [
+		{"ID":1,"Type":"idle","ItemID":0,"SpeakID":[{"Value":225000,"Weight":50},{"Value":225001,"Weight":50},{"Value":225002,"Weight":50},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":2,"Type":"hunger","ItemID":0,"SpeakID":[{"Value":225010,"Weight":50},{"Value":225011,"Weight":50},{"Value":225012,"Weight":0}],"ImageCount":1},
+		{"ID":3,"Type":"dirty","ItemID":0,"SpeakID":[{"Value":225050,"Weight":50},{"Value":225051,"Weight":50},{"Value":225052,"Weight":50}],"ImageCount":1},
+		{"ID":4,"Type":"sad","ItemID":0,"SpeakID":[{"Value":225020,"Weight":50},{"Value":225021,"Weight":50},{"Value":225022,"Weight":50}],"ImageCount":1},
+		{"ID":5,"Type":"sick","ItemID":0,"SpeakID":[{"Value":225030,"Weight":50},{"Value":225031,"Weight":50},{"Value":225032,"Weight":50}],"ImageCount":1},
+		{"ID":6,"Type":"work","ItemID":0,"SpeakID":[{"Value":225040,"Weight":50},{"Value":225041,"Weight":50},{"Value":225042,"Weight":50}],"ImageCount":1},
+		{"ID":7,"Type":"idle","ItemID":201201,"SpeakID":[{"Value":225060,"Weight":25},{"Value":225061,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":8,"Type":"idle","ItemID":201202,"SpeakID":[{"Value":225070,"Weight":25},{"Value":225071,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":9,"Type":"idle","ItemID":201203,"SpeakID":[{"Value":225080,"Weight":25},{"Value":225081,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":10,"Type":"idle","ItemID":204204,"SpeakID":[{"Value":225090,"Weight":25},{"Value":225091,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":11,"Type":"idle","ItemID":202201,"SpeakID":[{"Value":225100,"Weight":10},{"Value":225101,"Weight":10},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":12,"Type":"idle","ItemID":201208,"SpeakID":[{"Value":225110,"Weight":25},{"Value":225111,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":13,"Type":"idle","ItemID":203202,"SpeakID":[{"Value":225120,"Weight":25},{"Value":225121,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":14,"Type":"shit","ItemID":0,"SpeakID":[{"Value":225130,"Weight":50},{"Value":225131,"Weight":50}],"ImageCount":1},
+		{"ID":15,"Type":"idle","ItemID":203101,"SpeakID":[{"Value":225122,"Weight":25},{"Value":225123,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":16,"Type":"idle","ItemID":205101,"SpeakID":[{"Value":225112,"Weight":25},{"Value":225113,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":17,"Type":"idle","ItemID":202101,"SpeakID":[{"Value":225140,"Weight":25},{"Value":225141,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":18,"Type":"idle","ItemID":205201,"SpeakID":[{"Value":225150,"Weight":25},{"Value":225151,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":19,"Type":"idle","ItemID":205202,"SpeakID":[{"Value":225160,"Weight":25},{"Value":225161,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":20,"Type":"idle","ItemID":201305,"SpeakID":[{"Value":225170,"Weight":25},{"Value":225171,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":21,"Type":"idle","ItemID":201306,"SpeakID":[{"Value":225180,"Weight":25},{"Value":225181,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":22,"Type":"idle","ItemID":202301,"SpeakID":[{"Value":225190,"Weight":25},{"Value":225191,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1},
+		{"ID":23,"Type":"idle","ItemID":203301,"SpeakID":[{"Value":225200,"Weight":25},{"Value":225201,"Weight":25},{"Value":0,"Weight":50}],"ImageCount":1}	
+	]
+}

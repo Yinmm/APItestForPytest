@@ -1,0 +1,25 @@
+{
+	"Data": [
+		{"ID":1,"ItemBaseType":1,"KeyName":"Gold","SubTypeNameLocID":"10010","NormalTabIcon":"icon_jinbi_unfocus","FocusTabIcon":"icon_jinbi_focus","InBagType":0},
+		{"ID":2,"ItemBaseType":1,"KeyName":"Currency","SubTypeNameLocID":"10011","NormalTabIcon":"icon_zuanshi_unfocus","FocusTabIcon":"icon_zuanshi_focus","InBagType":0},
+		{"ID":3,"ItemBaseType":1,"KeyName":"Energy","SubTypeNameLocID":"10012","NormalTabIcon":"icon_shipinquan_unfocus","FocusTabIcon":"icon_shipinquan_focus","InBagType":0},
+		{"ID":100,"ItemBaseType":1,"KeyName":"PetAttr","SubTypeNameLocID":"10013","NormalTabIcon":"icon_shuxing_unfocus","FocusTabIcon":"icon_shuxing_focus","InBagType":0},
+		{"ID":10,"ItemBaseType":2,"KeyName":"Gift","SubTypeNameLocID":"10020","NormalTabIcon":"icon_daoju_unfocus","FocusTabIcon":"icon_daoju_focus","InBagType":4},
+		{"ID":11,"ItemBaseType":2,"KeyName":"Food","SubTypeNameLocID":"10021","NormalTabIcon":"icon_shiwu_unfocus","FocusTabIcon":"icon_shiwu_focus","InBagType":1},
+		{"ID":12,"ItemBaseType":2,"KeyName":"Bath","SubTypeNameLocID":"10022","NormalTabIcon":"icon_qingjie_unfocus","FocusTabIcon":"icon_qingjie_focus","InBagType":2},
+		{"ID":13,"ItemBaseType":2,"KeyName":"Toy","SubTypeNameLocID":"10023","NormalTabIcon":"icon_wanju_unfocus","FocusTabIcon":"icon_wanju_focus","InBagType":3},
+		{"ID":14,"ItemBaseType":2,"KeyName":"Inject","SubTypeNameLocID":"10024","NormalTabIcon":"icon_daoju_unfocus","FocusTabIcon":"icon_daoju_focus","InBagType":4},
+		{"ID":15,"ItemBaseType":2,"KeyName":"Drug","SubTypeNameLocID":"10025","NormalTabIcon":"icon_yaopin_unfocus","FocusTabIcon":"icon_yaopin_focus","InBagType":4},
+		{"ID":16,"ItemBaseType":2,"KeyName":"EliminateItem","SubTypeNameLocID":"10026","NormalTabIcon":"icon_daoju_unfocus","FocusTabIcon":"icon_daoju_focus","InBagType":4},
+		{"ID":17,"ItemBaseType":2,"KeyName":"Package","SubTypeNameLocID":"10026","NormalTabIcon":"icon_daoju_unfocus","FocusTabIcon":"icon_daoju_focus","InBagType":4},
+		{"ID":20,"ItemBaseType":3,"KeyName":"Cloth","SubTypeNameLocID":"10030","NormalTabIcon":"icon_yifu_unfocus","FocusTabIcon":"icon_yifu_focus","InBagType":6},
+		{"ID":21,"ItemBaseType":3,"KeyName":"Headwear","SubTypeNameLocID":"10031","NormalTabIcon":"icon_toushi_unfocus","FocusTabIcon":"icon_toushi_focus","InBagType":7},
+		{"ID":22,"ItemBaseType":3,"KeyName":"Glasses","SubTypeNameLocID":"10032","NormalTabIcon":"icon_yanjing_unfocus","FocusTabIcon":"icon_yanjing_focus","InBagType":8},
+		{"ID":23,"ItemBaseType":3,"KeyName":"Hand","SubTypeNameLocID":"10033","NormalTabIcon":"icon_shouchi_unfocus","FocusTabIcon":"icon_shouchi_focus","InBagType":9},
+		{"ID":31,"ItemBaseType":4,"KeyName":"Floor","SubTypeNameLocID":"10041","NormalTabIcon":"icon_diban_unfocus","FocusTabIcon":"icon_diban_focus","InBagType":10},
+		{"ID":32,"ItemBaseType":4,"KeyName":"WallPaper","SubTypeNameLocID":"10042","NormalTabIcon":"icon_qiangzhi_unfocus","FocusTabIcon":"icon_qiangzhi_focus","InBagType":11},
+		{"ID":33,"ItemBaseType":4,"KeyName":"Furniture","SubTypeNameLocID":"10043","NormalTabIcon":"icon_jiaju_unfocus","FocusTabIcon":"icon_jiaju_focus","InBagType":12},
+		{"ID":34,"ItemBaseType":4,"KeyName":"Adorn","SubTypeNameLocID":"10044","NormalTabIcon":"icon_zhuangshi_unfocus","FocusTabIcon":"icon_zhuangshi_focus","InBagType":0},
+		{"ID":41,"ItemBaseType":5,"KeyName":"Photo","SubTypeNameLocID":"10051","NormalTabIcon":"icon_xiangpian_unfocus","FocusTabIcon":"icon_xiangpian_focus","InBagType":14}	
+	]
+}

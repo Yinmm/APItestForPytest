@@ -1,0 +1,17 @@
+{
+	"Data": [
+		{"ID":1,"KeyName":"MAIL","NameLocID":140001,"Icon":"gn_1","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":10,"Guide":0},
+		{"ID":3,"KeyName":"BAG","NameLocID":140003,"Icon":"gn_3","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":10,"Guide":0},
+		{"ID":4,"KeyName":"WORK","NameLocID":140004,"Icon":"gn_4","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":5,"KeyName":"CLOTHES","NameLocID":140005,"Icon":"gn_5","Condition":[{"UnlockType":1,"ID":2}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":8,"KeyName":"DAILY_TASK","NameLocID":140008,"Icon":"gn_8","Condition":[{"UnlockType":3,"ID":10}],"expression":1,"Represent":11,"Guide":0},
+		{"ID":10,"KeyName":"STUDY","NameLocID":140010,"Icon":"gn_10","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":12,"KeyName":"BUILDING","NameLocID":140012,"Icon":"gn_12","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":25,"KeyName":"UNDEFINE","NameLocID":0,"Icon":"","Condition":[{"UnlockType":3,"ID":10}],"expression":1,"Represent":10,"Guide":0},
+		{"ID":50,"KeyName":"CONVERT","NameLocID":140024,"Icon":"gn_24","Condition":[{"UnlockType":1,"ID":1}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":100,"KeyName":"DISCOUNT_SHOP","NameLocID":140025,"Icon":"gn_100","Condition":[{"UnlockType":1,"ID":2}],"expression":3,"Represent":11,"Guide":0},
+		{"ID":101,"KeyName":"BAG_SHOP","NameLocID":140026,"Icon":"gn_101","Condition":[{"UnlockType":2,"ID":3}],"expression":3,"Represent":10,"Guide":0},
+		{"ID":102,"KeyName":"CLOTHES_SHOP","NameLocID":140027,"Icon":"gn_102","Condition":[{"UnlockType":2,"ID":5}],"expression":3,"Represent":10,"Guide":0},
+		{"ID":103,"KeyName":"BUILDING_SHOP","NameLocID":140028,"Icon":"gn_103","Condition":[{"UnlockType":2,"ID":12}],"expression":3,"Represent":10,"Guide":0}	
+	]
+}

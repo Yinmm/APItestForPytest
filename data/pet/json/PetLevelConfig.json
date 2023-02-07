@@ -1,0 +1,11 @@
+{
+	"Data": [
+		{"ID":0,"NextWeight":1000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":1000}]},
+		{"ID":1,"NextWeight":0,"Reward":[{"itemBaseType":1,"itemID":1,"amount":100}]},
+		{"ID":2,"NextWeight":5000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":110}]},
+		{"ID":3,"NextWeight":15000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":120}]},
+		{"ID":4,"NextWeight":30000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":130}]},
+		{"ID":5,"NextWeight":60000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":150}]},
+		{"ID":6,"NextWeight":90000,"Reward":[{"itemBaseType":1,"itemID":1,"amount":151}]}	
+	]
+}

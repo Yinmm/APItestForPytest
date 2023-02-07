@@ -1,0 +1,10 @@
+{
+	"Data": [
+		{"ID":1,"KeyName":"Idle","Priority":1,"AutoAction":true,"ClickInteract":true,"Eat":true,"Wash":true,"Play":true,"Heal":true,"Work":true},
+		{"ID":2,"KeyName":"Hunger","Priority":4,"AutoAction":false,"ClickInteract":false,"Eat":true,"Wash":true,"Play":true,"Heal":true,"Work":false},
+		{"ID":3,"KeyName":"Dirty","Priority":2,"AutoAction":true,"ClickInteract":true,"Eat":true,"Wash":true,"Play":true,"Heal":true,"Work":false},
+		{"ID":4,"KeyName":"Sad","Priority":3,"AutoAction":false,"ClickInteract":true,"Eat":true,"Wash":true,"Play":true,"Heal":true,"Work":false},
+		{"ID":5,"KeyName":"Sick","Priority":5,"AutoAction":false,"ClickInteract":false,"Eat":false,"Wash":false,"Play":false,"Heal":true,"Work":false},
+		{"ID":6,"KeyName":"Out","Priority":6,"AutoAction":false,"ClickInteract":false,"Eat":false,"Wash":false,"Play":false,"Heal":false,"Work":false}	
+	]
+}

@@ -28,18 +28,18 @@ class MongoDB:
             logger.info("连接mongodb出现错误，错误原因：{}".format(e))
 
     def __del__(self):  # 对象资源被释放时触发，在对象即将被删除时的最后操作
-        # 关闭数据库连接
+        # 关闭数据库连接，
+        # TODO 在del调用数据库close方法不会生效，会导致程序一直不退出，具体原因暂不清楚，后续解决
         self.conn.close()
 
     def select(self):
         #查询
-        a = self.db.get_collection("account").find({"register.username":"test12"})
+        a = self.db.get_collection("account").find({"register.username": "test12"})
         print(a)
 
     def update(self, coll="account", acid=''):
         self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}})
-        self.conn.close()
-        # pass
+        self.conn.close()  # 在del里调用该函数不生效，所以先放在这里，保证程序在运行完退出
 
 
 # key = "luckyTree:637f2c22be4c994db6bc09c5"
@@ -52,5 +52,5 @@ class MongoDB:
 
 mongodb = MongoDB()
 
-mongodb.update(acid="63db0e5852addd586045fcee")
+mongodb.update(acid="63d8d082cc10b2d82d22096a")
 # test.update("account", "63db0e5852addd586045fcee")

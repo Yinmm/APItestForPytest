@@ -1,0 +1,11 @@
+{
+	"Data": [
+		{"ID":1,"KeyName":"SIMPLE","TypeName":"普通","ActionName":""},
+		{"ID":2,"KeyName":"TYPE1","TypeName":"墙纸","ActionName":""},
+		{"ID":3,"KeyName":"TYPE2","TypeName":"地板","ActionName":""},
+		{"ID":4,"KeyName":"TYPE3","TypeName":"拉门","ActionName":""},
+		{"ID":5,"KeyName":"TYPE4","TypeName":"学习","ActionName":""},
+		{"ID":6,"KeyName":"TYPE5","TypeName":"娱乐","ActionName":""},
+		{"ID":7,"KeyName":"TYPE6","TypeName":"健身","ActionName":""}	
+	]
+}

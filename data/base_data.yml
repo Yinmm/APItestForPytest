@@ -4,7 +4,7 @@ init_admin_user:
 
 #测试环境
 test_account_hasrole:
-  username: "1test002"
+  username: "1test001"
   password: "123456"
 
 

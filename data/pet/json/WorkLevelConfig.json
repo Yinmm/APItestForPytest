@@ -1,0 +1,9 @@
+{
+	"Data": [
+		{"ID":1,"NextTime":0,"Reward":[{"itemBaseType":1,"itemID":1,"amount":125}]},
+		{"ID":2,"NextTime":8,"Reward":[{"itemBaseType":1,"itemID":1,"amount":188}]},
+		{"ID":3,"NextTime":24,"Reward":[{"itemBaseType":1,"itemID":1,"amount":250}]},
+		{"ID":4,"NextTime":56,"Reward":[{"itemBaseType":1,"itemID":1,"amount":375}]},
+		{"ID":5,"NextTime":120,"Reward":[{"itemBaseType":1,"itemID":1,"amount":625}]}	
+	]
+}

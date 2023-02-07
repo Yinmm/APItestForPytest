@@ -1,0 +1,7 @@
+{
+	"Data": [
+		{"ID":1,"FromRoom":1,"FromPortalName":"1","ToRoom":4,"ToPortalName":"1"},
+		{"ID":2,"FromRoom":1,"FromPortalName":"2","ToRoom":3,"ToPortalName":"1"},
+		{"ID":3,"FromRoom":1,"FromPortalName":"3","ToRoom":2,"ToPortalName":"1"}	
+	]
+}

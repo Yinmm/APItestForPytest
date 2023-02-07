@@ -1,0 +1,24 @@
+{
+	"Data": [
+		{"ID":1,"Type":1,"KeyName":"Gold","NameLocID":11011,"DesLocID":12011,"Icon":"icon_gold","Icon2":"icon_gold_xiao","Icon3":"icon_gold","Color":""},
+		{"ID":2,"Type":2,"KeyName":"Currency","NameLocID":11012,"DesLocID":12012,"Icon":"icon_currency","Icon2":"icon_currency","Icon3":"icon_currency","Color":""},
+		{"ID":3,"Type":3,"KeyName":"Stamina","NameLocID":11013,"DesLocID":12013,"Icon":"icon_video","Icon2":"icon_video","Icon3":"icon_video","Color":""},
+		{"ID":100,"Type":100,"KeyName":"Mood","NameLocID":11100,"DesLocID":12100,"Icon":"icon_mood","Icon2":"icon_mood","Icon3":"icon_mood","Color":"#845194"},
+		{"ID":101,"Type":100,"KeyName":"Clean","NameLocID":11101,"DesLocID":12101,"Icon":"icon_clean","Icon2":"icon_clean","Icon3":"icon_clean","Color":"#5577E3"},
+		{"ID":102,"Type":100,"KeyName":"Hunger","NameLocID":11102,"DesLocID":12102,"Icon":"icon_hunger","Icon2":"icon_hunger","Icon3":"icon_hunger","Color":"#D05D00"},
+		{"ID":103,"Type":100,"KeyName":"Charm","NameLocID":11103,"DesLocID":12103,"Icon":"icon_charm","Icon2":"icon_charm","Icon3":"icon_charm","Color":""},
+		{"ID":104,"Type":100,"KeyName":"Intellect","NameLocID":11104,"DesLocID":12104,"Icon":"","Icon2":"","Icon3":"","Color":""},
+		{"ID":105,"Type":100,"KeyName":"Age","NameLocID":11105,"DesLocID":12105,"Icon":"chengzhang_item","Icon2":"chengzhang_item","Icon3":"chengzhang_item","Color":""},
+		{"ID":106,"Type":100,"KeyName":"IQ","NameLocID":11106,"DesLocID":12106,"Icon":"icon_iq","Icon2":"icon_iq","Icon3":"icon_iq","Color":""},
+		{"ID":107,"Type":100,"KeyName":"EQ","NameLocID":11107,"DesLocID":12107,"Icon":"icon_eq","Icon2":"icon_eq","Icon3":"icon_eq","Color":""},
+		{"ID":108,"Type":100,"KeyName":"Body","NameLocID":11108,"DesLocID":12108,"Icon":"icon_body","Icon2":"icon_body","Icon3":"icon_body","Color":""},
+		{"ID":109,"Type":100,"KeyName":"Memory","NameLocID":11109,"DesLocID":12109,"Icon":"icon_memory","Icon2":"icon_memory","Icon3":"icon_memory","Color":""},
+		{"ID":110,"Type":100,"KeyName":"Imagination","NameLocID":11110,"DesLocID":12110,"Icon":"icon_imagination","Icon2":"icon_imagination","Icon3":"icon_imagination","Color":""},
+		{"ID":111,"Type":100,"KeyName":"Energy","NameLocID":11111,"DesLocID":12111,"Icon":"icon_energy","Icon2":"icon_energy","Icon3":"icon_energy","Color":""},
+		{"ID":112,"Type":100,"KeyName":"Comprehension","NameLocID":11112,"DesLocID":12112,"Icon":"icon_comprehension","Icon2":"icon_comprehension","Icon3":"icon_comprehension","Color":""},
+		{"ID":113,"Type":100,"KeyName":"Health","NameLocID":11113,"DesLocID":12113,"Icon":"icon_health","Icon2":"icon_health","Icon3":"icon_health","Color":"#00B56F"},
+		{"ID":114,"Type":100,"KeyName":"Honor","NameLocID":11114,"DesLocID":12114,"Icon":"","Icon2":"","Icon3":"","Color":""},
+		{"ID":115,"Type":100,"KeyName":"Weight","NameLocID":0,"DesLocID":0,"Icon":"","Icon2":"","Icon3":"","Color":""},
+		{"ID":116,"Type":100,"KeyName":"WeightMax","NameLocID":0,"DesLocID":0,"Icon":"","Icon2":"","Icon3":"","Color":""}	
+	]
+}

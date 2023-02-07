@@ -9,6 +9,7 @@ from operation import account, role
 from common.mongodb_operate import mongodb
 from common.read_data import data
 from common.logger import logger
+from data.pet.pet_config import get_pet_config
 
 BASE_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
@@ -25,6 +26,7 @@ def get_data(yaml_file_name):
 
 base_data = get_data("base_data.yml")
 pet_data = get_data("pet/pet_test_data.yml")
+pet_config = get_pet_config
 
 
 # account_id = base_data["test_account_hasrole"]["account_id"]

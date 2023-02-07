@@ -11,3 +11,10 @@
 #     dict[key]=value
 #     print(value)
 # wb.close()
+
+for i in range(5):
+    for j in range(9):
+        if j == 1:
+            print(j)
+            break
+    print(i)

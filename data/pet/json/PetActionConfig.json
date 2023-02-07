@@ -1,0 +1,8 @@
+{
+	"Data": [
+		{"ID":1,"AnimId":31,"Unlock":0,"Weight":30},
+		{"ID":2,"AnimId":32,"Unlock":0,"Weight":30},
+		{"ID":3,"AnimId":33,"Unlock":0,"Weight":30},
+		{"ID":4,"AnimId":34,"Unlock":0,"Weight":10}	
+	]
+}

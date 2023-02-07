@@ -2,7 +2,7 @@ import pytest
 import allure
 from operation.item import *
 from operation.gm import GM
-from testcases.conftest import pet_data
+from testcases.conftest import pet_data, pet_config
 from common.logger import logger
 
 
@@ -75,22 +75,31 @@ class TestItem(object):
     @allure.description("该用例是购买物品的测试")
     @pytest.mark.single
     @pytest.mark.smoke
-    @pytest.mark.parametrize("gold, cloth, furniture, Class, ID, number, except_code, except_msg",
+    @pytest.mark.parametrize("gold, cloth, furniture, Class, ID_type, number, except_code, except_msg",
                              pet_data["test_item_buy"])
-    def test_item_buy(self, pet_login_hasrole_fixture, gold, cloth, furniture, Class, ID, number, except_code,
+    def test_item_buy(self, pet_login_hasrole_fixture, gold, cloth, furniture, Class, ID_type, number, except_code,
                       except_msg):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture
         token = pet_info["data"]["token"]
-        step_item_buy(gold, Class, ID, number)
+        item_id = 999
+        item_gold = 0
+        item_list = pet_config.get_FinishItemConfig()+pet_config.get_ClothesItemConfig()
+        if ID_type != item_id:
+            for i in item_list:
+                if ID_type == i["Type"]:
+                    item_id = i["ID"]
+                    item_gold = int(gold*int(i["ObtainExpend"]["amount"]))
+                    break
+        step_item_buy(item_gold, Class, item_id, number)
         gm = GM(token)
-        gm.gm_gold(gold)
+        gm.gm_gold(item_gold)
         if cloth == 1:
             gm.gm_clean_cloth()
         if furniture == 1:
             gm.gm_clean_furniture()
         gm.moditem_list()
-        result = item_buy(token, Class, ID, number)
+        result = item_buy(token, Class, item_id, number)
         assert result.response.status_code == 200
         logger.info("code ==>> 期望结果：{}， 实际结果：{}".format(except_code, result.response.json().get("code")))
         assert result.response.json().get("code") == except_code

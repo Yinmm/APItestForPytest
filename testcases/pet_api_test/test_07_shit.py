@@ -9,11 +9,11 @@ from common.logger import logger
 @allure.feature("屎模块")
 class TestShit(object):
     """屎信息模块"""
-
     @allure.story("用例--获取屎信息")
     @allure.description("该用例是获取屎信息的测试")
     @pytest.mark.single
     @pytest.mark.smoke
+    # TODO 待增加离线时的用例
     def test_shit_info(self, pet_login_hasrole_fixture):
         logger.info("*************** 开始执行用例 ***************")
         pet_info = pet_login_hasrole_fixture

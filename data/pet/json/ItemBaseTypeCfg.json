@@ -1,0 +1,9 @@
+{
+	"Data": [
+		{"ID":1,"KeyName":"Tokens","TypeName":"代币","TypeNameLocID":"10002"},
+		{"ID":2,"KeyName":"Props","TypeName":"道具","TypeNameLocID":"10003"},
+		{"ID":3,"KeyName":"Clothes","TypeName":"服装","TypeNameLocID":"10004"},
+		{"ID":4,"KeyName":"Finish","TypeName":"装修","TypeNameLocID":"10005"},
+		{"ID":5,"KeyName":"Photo","TypeName":"相片","TypeNameLocID":"10006"}	
+	]
+}

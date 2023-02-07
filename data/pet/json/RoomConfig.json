@@ -1,0 +1,8 @@
+{
+	"Data": [
+		{"ID":1,"Name":"","Scene":"SceneRoom01","Icon":"icon_keting","InitDis":15,"DisRange":{"min":10,"max":20},"InitRotateAngle":24,"RotateRange":30,"BuildModelDis":20,"BuildModelAngle":36},
+		{"ID":2,"Name":"","Scene":"SceneRoom02","Icon":"icon_woshi","InitDis":15,"DisRange":{"min":10,"max":20},"InitRotateAngle":30,"RotateRange":30,"BuildModelDis":20,"BuildModelAngle":45},
+		{"ID":3,"Name":"","Scene":"SceneRoom03","Icon":"icon_yushi","InitDis":15,"DisRange":{"min":10,"max":20},"InitRotateAngle":30,"RotateRange":30,"BuildModelDis":20,"BuildModelAngle":45},
+		{"ID":4,"Name":"","Scene":"SceneRoom03","Icon":"icon_chufang","InitDis":15,"DisRange":{"min":10,"max":20},"InitRotateAngle":30,"RotateRange":30,"BuildModelDis":20,"BuildModelAngle":45}	
+	]
+}
