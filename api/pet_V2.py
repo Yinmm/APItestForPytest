@@ -83,6 +83,36 @@ class Work(RestClient):
     def work_recall(self, **kwargs):
         return self.post("/work/recall", **kwargs)
 
+    # 小游戏系列
+    # 游戏大厅
+    def lobby(self,  **kwargs):
+        return self.post("/job/lobby", **kwargs)
+
+    # 游戏开始
+    def game_start(self,  **kwargs):
+        return self.post("/job/game_start", **kwargs)
+
+    # 游戏结算
+    def game_over(self,  **kwargs):
+        return self.post("/job/game_over", **kwargs)
+
+    # 游戏结算—广告翻倍
+    def game_over_ad(self,  **kwargs):
+        return self.post("/job/game_over_ad", **kwargs)
+
+    # 游戏成就奖励领取
+    # TODO 该接口还需要修改
+    def achievement_rewards(self,  **kwargs):
+        return self.post("/job/achievement_rewards", **kwargs)
+
+    # 排行榜
+    def rank(self,  **kwargs):
+        return self.post("/job/rank", **kwargs)
+
+    # 排行榜用户点赞
+    def rank_like(self,  **kwargs):
+        return self.post("/job/rank_like", **kwargs)
+
 
 work = Work(api_root_url)
 
@@ -189,4 +219,5 @@ class LuckyTree(RestClient):
 
 
 LuckyTree = LuckyTree(api_root_url)
+
 
