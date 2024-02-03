@@ -56,7 +56,7 @@ if __name__ == '__main__':
     -q:与-v的作用相反，会简化输出信息
     -i:用例执行失败时，打印出其局部变量
     """
-    pytest.main(["test_02_login.py"])
+    pytest.main(["test_02_login.py -q"])
     # os.system(r"allure generate -c -o allure-report")
     # pytest.main(["test_01_register.py", "--clean-alluredir"])
 
