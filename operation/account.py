@@ -3,7 +3,7 @@ from api.pet_V2 import account
 from common.logger import logger
 
 
-def register(username, password, hardware):
+def register(username, password):
     """
     注册用户信息
     :param username: 用户名
@@ -14,7 +14,7 @@ def register(username, password, hardware):
     json_data = {
         "username": username,
         "password": password,
-        "hardware": hardware,
+        "hardware": "pc",
     }
     header = {
         "Content-Type": "application/json"
@@ -33,7 +33,7 @@ def register(username, password, hardware):
     return result
 
 
-def login(username, password, channel):
+def login(username, password):
     """
     登录用户
     :param username: 用户名
@@ -44,7 +44,7 @@ def login(username, password, channel):
     json_data = {
         "username": username,
         "password": password,
-        "channel": channel
+        "channel": 0
     }
     header = {
         "Content-Type": "application/json"

@@ -4,7 +4,9 @@ init_admin_user:
 
 #测试环境
 test_account_hasrole:
-  username: "1test001"
+  username: "m51"
   password: "123456"
 
 
+#客户端版本，给header用
+version: 10

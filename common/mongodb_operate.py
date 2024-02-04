@@ -32,25 +32,23 @@ class MongoDB:
         # TODO 在del调用数据库close方法不会生效，会导致程序一直不退出，具体原因暂不清楚，后续解决
         self.conn.close()
 
-    def select(self):
+    def select_home(self, aid):
         #查询
-        a = self.db.get_collection("account").find({"register.username": "test12"})
-        print(a)
+        a = self.db.get_collection("home").find_one({"_id": ObjectId(aid)})
+        self.conn.close()
+        return a
+    def select_items(self,aid):
+        a = self.db.get_collection("items").find_one({"_id": ObjectId(aid)})
+        self.conn.close()
+        return a
 
     def update(self, coll="account", acid=''):
-        self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}})
+        self.db.get_collection(coll).update_one({"_id": ObjectId(acid)}, {"$set": {'gm': True}}) #添加GM
         self.conn.close()  # 在del里调用该函数不生效，所以先放在这里，保证程序在运行完退出
 
 
-# key = "luckyTree:637f2c22be4c994db6bc09c5"
-# redis_db.del_key(key)
-# print(redis_db.redis_conn.exists(key))
-# name = "6360bf8ef36c0134564db35c"
-# value = "1667783801"
-# set = redis_db.set_hunger_timestamp(name, value)
-# print(set)
-
 mongodb = MongoDB()
 
-mongodb.update(acid="63e9933c46a45a6cf33d6e80")
+# mongodb.update(acid="63fd75949947c986f5d86897")
+# mongodb.select("63ea3909f1f984c3902ec34b")
 # test.update("account", "63db0e5852addd586045fcee")

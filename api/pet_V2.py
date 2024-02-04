@@ -192,6 +192,9 @@ class GM(RestClient):
     def gm_list(self, **kwargs):
         return self.post("/gm/change_item_quantity_batch", **kwargs)
 
+    def super_gm(self, **kwargs):
+        return self.post("/gm/web_change_item_quantity", **kwargs)
+
 
 gm = GM(api_root_url)
 

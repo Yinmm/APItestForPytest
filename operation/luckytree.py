@@ -1,7 +1,7 @@
 from core.result_base import ResultBase
 from api.pet_V2 import LuckyTree
 from common.logger import logger
-import json
+from header import set_header
 
 def luckytree_info(token):
     """

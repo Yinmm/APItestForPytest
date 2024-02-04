@@ -59,10 +59,16 @@ class RedisDB:
             new_dict[key] = value
         return new_dict
 
-    #删除key
+    # 删除key
     def del_key(self, key):
         self.redis_conn.delete(key)
 
+    # 删除账号的所有key
+    def del_all_key(self, aid):
+        key_list = ["give_d", "home", "last_request", "shit", "token", "{item}:time", "{item}"]
+        for i in key_list:
+            key = i + ":" + aid
+            self.del_key(key)
 
     # def set_dict_db(self, key, new_dict):
     #     dict = {}
@@ -71,7 +77,6 @@ class RedisDB:
     #         value = value.encode("utf-8")
     #         dict[key] = value
     #     self.redis_conn.hset(key, mapping=dict)
-
 
     def set_hash_value(self, name, key, value):
         try:
@@ -147,8 +152,8 @@ class RedisDB:
 
 
 redis_db = RedisDB(DB_CONF)
-# key = "luckyTree:637f2c22be4c994db6bc09c5"
-# redis_db.del_key(key)
+aid = "644b7efd4c46a8a488e00982"
+redis_db.del_all_key(aid)
 # print(redis_db.redis_conn.exists(key))
 # name = "6360bf8ef36c0134564db35c"
 # value = "1667783801"
