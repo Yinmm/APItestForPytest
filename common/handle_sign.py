@@ -32,7 +32,7 @@ class HandleSign:
         self.token = str(token)
         self.aid = str(aid)
         self.uuid = get_UUID()
-        self.version = str(version)response = {Response} <Response [200]>
+        self.version = str(version)
         self.body = body2String(body)
 
     # Todo sign加密方法
@@ -51,15 +51,13 @@ class HandleSign:
 #     sign = hashlib.md5(result.encode()).hexdigest()
 #     print(sign)
 #
-# random = "9246"
-# token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDc1NTA0NTgsImp0aSI6IjY1YmRlYzdhMTU0MTNmN2FiMWQxYjkwOSIsImFpZCI6IjY1YjI1NjQ3YzIyMTRiZTA1N2U5ODhlYiIsInNlY3VyaXR5X2tleSI6OTI0Nn0.V8FC2JL7xvFB03Lv2R9vpso44cm7nfG1q75bdElPBZw"
-# tt = 1706945658
-# aid = "65b25647c2214be057e988eb"
-# body = """{"number":2,"item_id":2191002,"target_aid":100291583,"class":2}"""
-# md5 = "d82cf07e1b95a4601b11d4bd31ab0c94"
+# random = "4177"
+# token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg5MzM4NDcsImp0aSI6IjY1ZDMwODU3N2MwNzA5ZWY1YjhiNmNkNSIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6NDE3N30.enCBrx38nEsJiCfRzNCfs4rxI5Xjg0OSSTMfcB-UjiQ"
+# tt = "1708329659"
+# aid = "65b25477c2214be057e988b1"
+# body = None
+# md5 = "074aa9d4a1258eb94f11b0500c8d557c"
 # version = 19
-# uuid = "0df1ada1-b978-4bf6-9e15-ed1c2d4a8acf"
-# print(body)
-# to_sign(random, token,tt, aid, body, version, uuid)
+# uuid = "4c882b45-0724-4ca3-96c7-50cd0f94f794"
+# to_sign(random, token, tt, aid, body, version, uuid)
 
-print(get_UUID())

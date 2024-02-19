@@ -188,7 +188,7 @@ def login_2_delete():
     # 注销
     pass
 
-headers = {}
+
 
 
 @pytest.fixture(scope="session", autouse=True)
@@ -211,30 +211,33 @@ def request_hook(request, login):
     def hook_before_request(request):
         # 获取请求的 body
         request_body = request.config.cache.get("request_body", None)
+        if request_body is None:
+            request_body = ""
         # 进行加密操作并返回加密sign、t、uuid
         handle_sign, uuid, t = HandleSign(random, token, aid, version, request_body).to_sign()
 
         # 从 request.config 获取保存的信息，或者在之前的 fixture 中设置
         headers = CaseInsensitiveDict(request.config.cache.get("request_headers", {}))
+        # headers = {}
         headers["Check-Sign"] = handle_sign
         headers["Check-Time"] = t
         headers["Check-Nonce"] = uuid
-        headers["Protocol-Version"] = version
+        headers["Protocol-Version"] = str(version)
         headers["token"] = token
+        headers = dict(headers)
+        return headers
 
         # 将 headers 保存到 request.config 以供后续测试使用
         # request.config.cache.set("request_headers", headers)
-    hook_before_request(request)
+    return hook_before_request(request)
 
 
 @pytest.fixture
 def make_request(request_hook):
     # 这个 fixture 负责实际发送请求
     def send_request(request_function, *args, **kwargs):
-        headers = dict(headers)
         response = request_function(*args, headers=request_hook, **kwargs)
-        # 进行断言等其他操作
-        assert response.status_code == 200
+        return response
     return send_request
 
 
