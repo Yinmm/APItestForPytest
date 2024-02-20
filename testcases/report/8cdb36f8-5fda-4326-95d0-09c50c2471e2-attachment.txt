@@ -12,18 +12,18 @@ INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> {
 }
 INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
 INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null
-INFO     log:account.py:61 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"65b25477c2214be057e988b1","can_play":true,"id_card_type":1,"last_logout_time":1708331222,"random":9293,"role_created":true,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg5MzYwODIsImp0aSI6IjY1ZDMxMTEyN2MwNzA5ZWY1YjhiNmQ0ZCIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6OTI5M30.THeQGqEf5Y1Fgf-EHl7eA2GmX03qkB873kIhHAiG2P0","warn_time":0,"widget_install_rewards":false}}
+INFO     log:account.py:61 登录用户 ==>> 返回结果 ==>> {"code":"SUCCESS","data":{"account_id":"65b25477c2214be057e988b1","can_play":true,"id_card_type":1,"last_logout_time":1708417393,"random":5157,"role_created":true,"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDkwMjIyNDQsImp0aSI6IjY1ZDQ2MWE0N2U3NmQxOTI2M2U0NGNiYyIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6NTE1N30.y5SU_VgxoQMw3haSnQ9VXtcEivIqcHg_oF1Hu4K7CKs","warn_time":0,"widget_install_rewards":false}}
 INFO     log:rest_client.py:51 接口请求地址 ==>> https://test-api.qingheer.com/work/info
 INFO     log:rest_client.py:52 接口请求方式 ==>> POST
 INFO     log:rest_client.py:54 接口请求头 ==>> {
-    "Check-Nonce": "d79f5ab4-c83c-4b5a-b5a8-52ceaed961ae",
-    "Check-Sign": "a74494dd828741ae69dca0f1ac6d7d96",
-    "Check-Time": "1708331282",
+    "Check-Sign": "6cabb4a63ec6cdd6d7ec7464e77deeea",
+    "Check-Time": "1708417444",
+    "Check-Nonce": "7d310f63-b4a0-4b84-bd14-0d49d5ce91bb",
     "Protocol-Version": "19",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg5MzYwODIsImp0aSI6IjY1ZDMxMTEyN2MwNzA5ZWY1YjhiNmQ0ZCIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6OTI5M30.THeQGqEf5Y1Fgf-EHl7eA2GmX03qkB873kIhHAiG2P0"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDkwMjIyNDQsImp0aSI6IjY1ZDQ2MWE0N2U3NmQxOTI2M2U0NGNiYyIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6NTE1N30.y5SU_VgxoQMw3haSnQ9VXtcEivIqcHg_oF1Hu4K7CKs"
 }
 INFO     log:rest_client.py:55 接口请求 params 参数 ==>> null
-INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> null
+INFO     log:rest_client.py:56 接口请求体 data 参数 ==>> "null"
 INFO     log:rest_client.py:57 接口请求体 json 参数 ==>> null
 INFO     log:rest_client.py:58 接口上传附件 files 参数 ==>> None
 INFO     log:rest_client.py:59 接口 cookies 参数 ==>> null

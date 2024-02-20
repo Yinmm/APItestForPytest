@@ -35,7 +35,6 @@ class HandleSign:
         self.version = str(version)
         self.body = body2String(body)
 
-    # Todo sign加密方法
 
     def to_sign(self):
         key = get_key(self.token, String2arr(self.random), self.aid)
@@ -44,20 +43,22 @@ class HandleSign:
         sign = hashlib.md5(result.encode()).hexdigest()
         return sign, self.uuid, t
 
-# def to_sign(random, token, tt, aid, body, version, uuid):
-#     key = get_key(token, String2arr(random), aid)
-#     t = str(tt)
-#     result = body + t + uuid + key + str(version)
-#     sign = hashlib.md5(result.encode()).hexdigest()
-#     print(sign)
-#
-# random = "4177"
-# token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDg5MzM4NDcsImp0aSI6IjY1ZDMwODU3N2MwNzA5ZWY1YjhiNmNkNSIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6NDE3N30.enCBrx38nEsJiCfRzNCfs4rxI5Xjg0OSSTMfcB-UjiQ"
-# tt = "1708329659"
+
+def to_test_sign(random, token, tt, aid, body, version, uuid):
+    key = get_key(token, String2arr(random), aid)
+    t = str(tt)
+    result = body + t + uuid + key + str(version)
+    sign = hashlib.md5(result.encode()).hexdigest()
+    print(sign)
+
+
+# random = "1106"
+# token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MDkwMTk3MjQsImp0aSI6IjY1ZDQ1N2NjMWVjMzFjZjI4MmRiMGNlOSIsImFpZCI6IjY1YjI1NDc3YzIyMTRiZTA1N2U5ODhiMSIsInNlY3VyaXR5X2tleSI6MTEwNn0.R0Y94Ch42zNTDtQuz4l9U04BoGC-QZjJr6o2vA2NwsY"
+# tt = "1708414923"
 # aid = "65b25477c2214be057e988b1"
-# body = None
-# md5 = "074aa9d4a1258eb94f11b0500c8d557c"
+# body = "{'class': 2, 'item_id': 100}"
+# md5 = "6a6f6843b323b573127755d1862e3f05"
 # version = 19
-# uuid = "4c882b45-0724-4ca3-96c7-50cd0f94f794"
-# to_sign(random, token, tt, aid, body, version, uuid)
+# uuid = 'e667b112-f6fa-4175-a2d6-7b00cb8bbb04'
+# to_test_sign(random, token, tt, aid, body, version, uuid)
 

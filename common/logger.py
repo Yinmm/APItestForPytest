@@ -19,7 +19,7 @@ class Logger():
 
         self.filelogger = logging.FileHandler(self.logname, mode='a', encoding="UTF-8")
         self.console = logging.StreamHandler()
-        self.console.setLevel(logging.DEBUG)
+        self.console.setLevel(logging.ERROR)
         self.filelogger.setLevel(logging.DEBUG)
         self.filelogger.setFormatter(self.formater)
         self.console.setFormatter(self.formater)
